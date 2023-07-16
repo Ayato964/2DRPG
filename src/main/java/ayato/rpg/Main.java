@@ -1,25 +1,18 @@
 package ayato.rpg;
 
 
-import org.ayato.system.ExecuteScene;
-import org.ayato.util.IBaseScene;
-
-import java.awt.*;
+import ayato.scene.Title;
+import org.ayato.system.LangLoader;
+import org.ayato.system.LunchScene;
 
 public class Main {
+    public static final LunchScene scene = new LunchScene("Hello");
+    public Main(){
+    }
     public static void main(String[] args) {
-        ExecuteScene scene = new ExecuteScene("Hello");
-        scene.changeScene(new IBaseScene() {
-            @Override
-            public void display(Graphics graphics) {
-
-            }
-
-            @Override
-            public void setup(ExecuteScene executeScene) {
-
-            }
-        });
+        LangLoader.create("assets/ayato/lang", LangLoader.JAPANESE);
+        Main e = new Main();
+        scene.changeScene(new Title());
         scene.setVisible(true);
     }
 }
