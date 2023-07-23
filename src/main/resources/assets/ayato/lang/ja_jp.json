@@ -1,1 +1,11 @@
-{"ayato.scene.Title.hello":"こんにちは世界！！"}
+{
+  "ayato.scene.Title.hello":"こんにちは世界！！",
+  "ayato.scene.Title.title":"なんとなく作るRPG",
+  "ayato.scene.Title.begin":"始める",
+  "ayato.scene.Title.exit":"終わる",
+  "ayato.scene.Menu.battle":"敵を倒す(Beta)",
+  "ayato.scene.Menu.hotel":"宿に泊まる(未実装)",
+  "ayato.scene.Menu.shop":"ショップに行く（未実装）",
+  "ayato.scene.Menu.selection":"どこに行くか選択してください",
+  "ayato.scene.ChooseMap.title":"どこのマップのモンスターを殺して回りますか？"
+}

@@ -1,0 +1,11 @@
+{
+  "ayato.scene.Title.hello":"Hello World!!",
+  "ayato.scene.Title.title":"Let's make RPG!",
+  "ayato.scene.Title.begin":"Begin",
+  "ayato.scene.Title.exit":"Exit",
+  "ayato.scene.Menu.battle":"kill enemies(Beta)",
+  "ayato.scene.Menu.hotel":"Go to the Hotel(未実装)",
+  "ayato.scene.Menu.shop":"Go to the Shop（未実装）",
+  "ayato.scene.Menu.selection":"choose it to where is the going",
+  "ayato.scene.ChooseMap.title":"Do you kill the monsters on the map in degrees?"
+}

@@ -21,7 +21,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 
-    implementation group :"org.ayato", name : "toonlib", version : "2.1"
+    implementation group :"org.ayato", name : "toonlib", version : "2.3.11"
 }
 
 test {

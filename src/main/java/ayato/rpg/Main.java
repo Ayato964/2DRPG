@@ -11,7 +11,6 @@ public class Main {
     }
     public static void main(String[] args) {
         LangLoader.create("assets/ayato/lang", LangLoader.JAPANESE);
-        Main e = new Main();
         scene.changeScene(new Title());
         scene.setVisible(true);
     }
