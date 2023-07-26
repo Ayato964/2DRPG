@@ -1,0 +1,16 @@
+{
+  "name": "blue_slime",
+  "min_lv": 1,
+  "hp": 10,
+  "uhp": 2,
+  "mp": 0,
+  "ump": 0,
+  "exp": 80,
+  "uexp": 20,
+  "g": 80,
+  "ug": 50,
+  "atk": 2,
+  "uatk": 1,
+  "defence": 0.001,
+  "udefence": 0.001
+}

@@ -1,7 +1,9 @@
 package ayato.scene;
 
 import ayato.entity.Player;
+import ayato.rpg.StagesFactory;
 import org.ayato.animation.Animation;
+import org.ayato.animation.AnimationKeyButtons;
 import org.ayato.animation.AnimationList;
 import org.ayato.animation.Properties;
 import org.ayato.system.Component;
@@ -23,8 +25,11 @@ public class ChooseMap implements IBaseScene {
                         .font(new Font("", Font.PLAIN, 64)).center().color(Color.RED), true);
 
         AnimationList<String, Properties<String>> list =
-                new AnimationList<>(lunchScene, "", Properties.ofText().font(new Font("", Font.PLAIN, 32)).center(),
-                        ()-> lunchScene.changeScene(new Battle(new Player(lunchScene, 0, 0, 0, 0)))
+                new AnimationList<>(lunchScene, "Normal Embust", Properties.ofText().font(new Font("", Font.PLAIN, 32)).center(),
+                        ()-> lunchScene.changeScene(new Battle(new Player(lunchScene, 0, 0, 0, 0), StagesFactory.STAGE_0.get().getStates()))
                         );
+        AnimationKeyButtons<String, AnimationList<String, Properties<String>>> alist =
+                new AnimationKeyButtons<>(list, 15, 30, 100, 60, Color.RED, Color.WHITE, Color.BLACK);
+        alist.setVisible(true);
     }
 }

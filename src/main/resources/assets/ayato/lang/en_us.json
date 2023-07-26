@@ -7,5 +7,11 @@
   "ayato.scene.Menu.hotel":"Go to the Hotel(未実装)",
   "ayato.scene.Menu.shop":"Go to the Shop（未実装）",
   "ayato.scene.Menu.selection":"choose it to where is the going",
-  "ayato.scene.ChooseMap.title":"Do you kill the monsters on the map in degrees?"
+  "ayato.scene.ChooseMap.title":"Do you kill the monsters on the map in degrees?",
+  "ayato.entity.PLayerStates.player_states":"$   $/$HP   $/$MP   $/$EXP   $G",
+
+
+
+
+  "ayato.animation.AnimationEntities.blue_slime":"Slime(Blue)"
 }

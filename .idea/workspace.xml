@@ -4,21 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.0.1.0&#10;&#10;タイトル画面の仮生成">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/EntityStates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/PLayerStates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Battle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" afterDir="false" />
+    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.0.2.0&#10;&#10;RPG画面の基本生成">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/animation/AnimationEntities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/rpg/EnemyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/rpg/StagesFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/rpg/StagesObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/system/JsonComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_blue.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/stage0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/enemy/slime_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/enemy/slime_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/enemy/slime_yellow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/rpg/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/rpg/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Title.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/EntityStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/EntityStates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/PLayerStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/PLayerStates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,15 +64,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;G:/My_Project/RPG_Test&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;モジュール&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.19655173&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "G:/My_Project/RPG_Test",
+    "project.structure.last.edited": "モジュール",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.19655173",
+    "settings.editor.selected.configurable": "com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\textures\enemy" />
+      <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\data" />
+      <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\" />
+      <recent name="G:\My_Project\RPG_Test\src\main\resources\ayato\" />
+    </key>
+  </component>
   <component name="RunManager" selected="アプリケーション.Run">
     <configuration name="Run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ayato.rpg.Main" />
@@ -127,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689533230526</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version.0.2.0&#10;&#10;RPG画面の基本生成">
+      <created>1690121501219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690121501219</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +168,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version.0.0.0&#10;&#10;始まり" />
     <MESSAGE value="Version.0.1.0&#10;&#10;タイトル画面の仮生成" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.0.1.0&#10;&#10;タイトル画面の仮生成" />
+    <MESSAGE value="Version.0.2.0&#10;&#10;RPG画面の基本生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.0.2.0&#10;&#10;RPG画面の基本生成" />
   </component>
 </project>

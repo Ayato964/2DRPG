@@ -17,6 +17,10 @@ public abstract class AbstractEntity {
         AVATER = maker;
     }
 
+    public ImageMaker getAVATER() {
+        return AVATER;
+    }
+
     public AbstractEntity setSTATES(EntityStates STATES) {
         this.STATES = STATES;
         return this;
@@ -27,4 +31,14 @@ public abstract class AbstractEntity {
     }
 
     protected abstract void reset();
+
+    public String  getHP() {
+        return STATES.HP + "/" + STATES.MHP + "HP";
+    }
+    public String getLV() {
+        return "LV." + STATES.LV;
+    }
+    public String getMP(){
+        return STATES.MP + "/" + STATES.MMP + "MP";
+    }
 }

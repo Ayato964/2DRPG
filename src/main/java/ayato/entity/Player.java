@@ -12,7 +12,7 @@ public class Player extends AbstractEntity{
 
     @Override
     protected void reset() {
-        setSTATES(new EntityStates("Player", 1, 20, 0, 20, 0, 0.0d));
+        setSTATES(new PLayerStates("Player", 1, 20, 0, 20, 500, 3, 0.0d));
         MEXP = 20;
     }
 }

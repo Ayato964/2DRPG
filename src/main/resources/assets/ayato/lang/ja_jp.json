@@ -7,5 +7,11 @@
   "ayato.scene.Menu.hotel":"宿に泊まる(未実装)",
   "ayato.scene.Menu.shop":"ショップに行く（未実装）",
   "ayato.scene.Menu.selection":"どこに行くか選択してください",
-  "ayato.scene.ChooseMap.title":"どこのマップのモンスターを殺して回りますか？"
+  "ayato.scene.ChooseMap.title":"どこのマップのモンスターを殺して回りますか？",
+  "ayato.entity.PLayerStates.player_states":"$   $/$HP   $/$MP   $/$EXP   $G",
+
+
+
+
+  "ayato.animation.AnimationEntities.blue_slime":"スライム(青)"
 }

@@ -1,0 +1,11 @@
+{
+  "name": "stage0",
+  "states": {
+    "enemy": {
+      "lv": 1,
+      "maxLv": 3,
+      "num": 2,
+      "entities": ["slime_blue"]
+    }
+  }
+}
