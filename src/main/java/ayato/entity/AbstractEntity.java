@@ -41,4 +41,14 @@ public abstract class AbstractEntity {
     public String getMP(){
         return STATES.MP + "/" + STATES.MMP + "MP";
     }
+
+    public int generateATK() {
+        return STATES.ATK;
+    }
+
+    public int recivedATK(int generateATK) {
+        int l = (int) ( generateATK * (1 - STATES.DF));
+        STATES.HP -= l;
+        return l;
+    }
 }

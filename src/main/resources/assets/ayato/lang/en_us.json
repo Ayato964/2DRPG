@@ -13,5 +13,16 @@
 
 
 
-  "ayato.animation.AnimationEntities.blue_slime":"Slime(Blue)"
+  "ayato.animation.AnimationEntities.blue_slime":"Slime(Blue)",
+  "ayato.scene.Battle.attack":"攻撃",
+  "ayato.scene.Battle.magic":"魔法",
+  "ayato.scene.Battle.item":"アイテム",
+  "ayato.scene.Battle.escape":"逃げる",
+  "ayato.scene.Battle.choose":"さぁ、どうする？",
+  "ayato.scene.Battle.choose_enemy":"攻撃の対象を選んでください",
+  "ayato.scene.Battle.attack_enemy":"$は$に$のダメージを与えた！！",
+  "ayato.scene.Battle.clear.mes":"すべての敵を倒した！！",
+  "ayato.scene.Battle.clear.result":"$は$EXPと$Gを手に入れた！！",
+  "ayato.scene.Battle.levelup.mes":"おめでとう！レベルが上がったよ！！",
+  "ayato.scene.Battle.gameover":"殺し合いに負けた"
 }

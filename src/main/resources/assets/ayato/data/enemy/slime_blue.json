@@ -6,11 +6,11 @@
   "mp": 0,
   "ump": 0,
   "exp": 80,
-  "uexp": 20,
-  "g": 80,
-  "ug": 50,
+  "uexp": 10,
+  "g": 50,
+  "ug": 30,
   "atk": 2,
-  "uatk": 1,
+  "uatk": 2,
   "defence": 0.001,
   "udefence": 0.001
 }

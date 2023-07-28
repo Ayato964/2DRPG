@@ -31,7 +31,7 @@ public class Menu implements IBaseScene {
                 new AnimationList<>(lunchScene, Component.get(this, "battle"),
                         Properties.ofText().color(Color.WHITE)
                                 .font(new Font("", Font.PLAIN, 32)),
-                        ()-> lunchScene.changeScene(new ChooseMap())
+                        ()-> lunchScene.changeScene(new ChooseMap(player))
                         );
         l.add(Component.get(this, "hotel"), ()-> System.out.println("Hotel!!"));
         l.add(Component.get(this, "shop"), ()-> System.out.println("Shop"));

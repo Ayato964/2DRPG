@@ -25,7 +25,7 @@ public class Battle extends AbstractBattle{
 
         for(int i = 0; i < enemy.length; i ++){
             enemy[i] = EnemyFactory.ENEMIES.get(enemies.get(new Random().nextInt(enemies.size())).asText()).get();
-            enemy[i].setEnemyLevel(enemy_states.get(JsonComponent.ENEMY_MAXLV).asInt());
+            enemy[i].setEnemyLevel(player.getSTATES().LV, enemy_states.get(JsonComponent.ENEMY_MAXLV).asInt());
         }
         return enemy;
     }

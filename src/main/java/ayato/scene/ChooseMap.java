@@ -13,6 +13,10 @@ import org.ayato.util.IBaseScene;
 import java.awt.*;
 
 public class ChooseMap implements IBaseScene {
+    Player player;
+    public ChooseMap(Player player){
+        this.player = player;
+    }
     @Override
     public void display(Graphics graphics) {
 
@@ -26,7 +30,7 @@ public class ChooseMap implements IBaseScene {
 
         AnimationList<String, Properties<String>> list =
                 new AnimationList<>(lunchScene, "Normal Embust", Properties.ofText().font(new Font("", Font.PLAIN, 32)).center(),
-                        ()-> lunchScene.changeScene(new Battle(new Player(lunchScene, 0, 0, 0, 0), StagesFactory.STAGE_0.get().getStates()))
+                        ()-> lunchScene.changeScene(new Battle(player, StagesFactory.STAGE_0.get().getStates()))
                         );
         AnimationKeyButtons<String, AnimationList<String, Properties<String>>> alist =
                 new AnimationKeyButtons<>(list, 15, 30, 100, 60, Color.RED, Color.WHITE, Color.BLACK);

@@ -22,8 +22,8 @@ public class Enemy extends AbstractEntity{
         U_DEFENCE = entity_states.get(EnemyFactory.U_DF).asDouble();
         reset();
     }
-    public void setEnemyLevel(int maxLv){
-        STATES.LV = new Random().nextInt(STATES.LV, maxLv);
+    public void setEnemyLevel(int playerLv, int maxLv){
+        STATES.LV = new Random().nextInt(STATES.LV, playerLv + maxLv - 1);
         STATES = new EntityStates(
                 STATES.NAME,
                 STATES.LV,
