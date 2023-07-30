@@ -4,12 +4,12 @@
   "ayato.scene.Title.begin":"始める",
   "ayato.scene.Title.exit":"終わる",
   "ayato.scene.Menu.battle":"敵を倒す(Beta)",
-  "ayato.scene.Menu.hotel":"宿に泊まる(未実装)",
+  "ayato.scene.Menu.hotel":"宿に泊まる",
   "ayato.scene.Menu.shop":"ショップに行く（未実装）",
   "ayato.scene.Menu.selection":"どこに行くか選択してください",
   "ayato.scene.ChooseMap.title":"どこのマップのモンスターを殺して回りますか？",
   "ayato.entity.PLayerStates.player_states":"Lv.$ $  $/$HP   $/$MP   $/$EXP   $G",
-
+  "ayato.scene.ChooseMap.slime":"青スライムの源",
 
 
 
@@ -24,5 +24,13 @@
   "ayato.scene.Battle.clear.mes":"すべての敵を倒した！！",
   "ayato.scene.Battle.clear.result":"$は$EXPと$Gを手に入れた！！",
   "ayato.scene.Battle.levelup.mes":"おめでとう！レベルが上がったよ！！",
-  "ayato.scene.Battle.gameover":"殺し合いに負けた"
+  "ayato.scene.Battle.gameover":"殺し合いに負けた",
+  "ayato.system.Inn.heal_success":"全回復した",
+  "ayato.system.Inn.empty_money":"お金が足りない",
+  "ayato.system.Inn.mes1":"いらっしゃいませ。ここは宿です。",
+  "ayato.system.Inn.mes2":"$Gを支払うことで、この宿に止まることができます。",
+  "ayato.system.Inn.mes3":"また、宿に泊まるとHPが全回復します",
+  "ayato.system.Inn.mes4":"いかがなさいますか？",
+  "ayato.system.Inn.yes":"はい",
+  "ayato.system.Inn.no":"いいえ"
 }

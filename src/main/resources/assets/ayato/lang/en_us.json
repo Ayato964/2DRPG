@@ -9,6 +9,7 @@
   "ayato.scene.Menu.selection":"choose it to where is the going",
   "ayato.scene.ChooseMap.title":"Do you kill the monsters on the map in degrees?",
   "ayato.entity.PLayerStates.player_states":"$   $/$HP   $/$MP   $/$EXP   $G",
+  "ayato.scene.ChooseMap.slime":"青スライムの源",
 
 
 
@@ -24,5 +25,13 @@
   "ayato.scene.Battle.clear.mes":"すべての敵を倒した！！",
   "ayato.scene.Battle.clear.result":"$は$EXPと$Gを手に入れた！！",
   "ayato.scene.Battle.levelup.mes":"おめでとう！レベルが上がったよ！！",
-  "ayato.scene.Battle.gameover":"殺し合いに負けた"
+  "ayato.scene.Battle.gameover":"殺し合いに負けた",
+  "ayato.system.Inn.heal_success":"全回復した",
+  "ayato.system.Inn.empty_money":"お金が足りない",
+  "ayato.system.Inn.mes1":"いらっしゃいませ。ここは宿です。",
+  "ayato.system.Inn.mes2":"$Gを支払うことで、この宿に止まることができます。",
+  "ayato.system.Inn.mes3":"また、宿に泊まるとHPが全回復します",
+  "ayato.system.Inn.mes4":"いかがなさいますか？",
+  "ayato.system.Inn.yes":"はい",
+  "ayato.system.Inn.no":"いいえ"
 }

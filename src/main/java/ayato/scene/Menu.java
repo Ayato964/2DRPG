@@ -33,7 +33,7 @@ public class Menu implements IBaseScene {
                                 .font(new Font("", Font.PLAIN, 32)),
                         ()-> lunchScene.changeScene(new ChooseMap(player))
                         );
-        l.add(Component.get(this, "hotel"), ()-> System.out.println("Hotel!!"));
+        l.add(Component.get(this, "hotel"), ()-> lunchScene.changeScene(new InnScene(player)));
         l.add(Component.get(this, "shop"), ()-> System.out.println("Shop"));
         AnimationKeyButtons<String, AnimationList<String, Properties<String>>> list =
                 new AnimationKeyButtons<>(l, 20, 40, 100, 50, Color.RED, Color.WHITE, Color.BLACK);

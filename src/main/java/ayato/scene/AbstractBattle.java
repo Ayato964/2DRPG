@@ -6,6 +6,8 @@ import ayato.entity.Enemy;
 import ayato.entity.PLayerStates;
 import ayato.entity.Player;
 import ayato.rpg.Main;
+import ayato.system.Inn;
+import ayato.system.PropertiesTemplate;
 import org.ayato.animation.Animation;
 import org.ayato.animation.AnimationKeyButtons;
 import org.ayato.animation.AnimationList;
@@ -47,6 +49,7 @@ public abstract class AbstractBattle implements IBaseScene {
                         .frame(0, 5, 211, 10, ()->Color.WHITE, Color.BLACK)
                         .center().changeMessage(states.getString()),
                 true);
+
         AnimationEntities entities = new AnimationEntities(lunchScene, enemy, this::returnEnemyAction, 0, 0, 211, 60);
         entities.draw();
         playerGUI(lunchScene, entities);
@@ -69,7 +72,14 @@ public abstract class AbstractBattle implements IBaseScene {
                             entities.begin();
                         });
         PLAYER_CHOOSE.add(Component.get(this, "magic"), ()-> System.out.println("Magic"));
-        PLAYER_CHOOSE.add(Component.get(this, "item"), ()-> System.out.println("Item used!!"));
+        PLAYER_CHOOSE.add(Component.get(this, "item"), ()->{
+            Event.get(AbstractBattle.class, "battle_free").setEvent(false);
+            Inn.stayInn(Main.scene, player, 1000, iProperty -> {
+                Event.get(AbstractBattle.class, "battle_free").setEvent(true);
+                CHOOSE.setVisible(false);
+                CHOOSE.setVisible(true);
+            });
+        });
         PLAYER_CHOOSE.add(Component.get(this, "escape"), ()-> System.out.println("Escaped!!!"));
 
         CHOOSE = new AnimationKeyButtons<>(PLAYER_CHOOSE, 5, 75, 30, 40, Color.RED, Color.WHITE, Color.BLACK);
@@ -94,20 +104,14 @@ public abstract class AbstractBattle implements IBaseScene {
         Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
 
         int E_RECIVED_DAMAGE = entity.recivedATK(player.generateATK());
-        Animation.create(Main.scene, "",
-                Properties.ofText(50, 80)
-                        .font(new Font("", Font.PLAIN, 32))
-                        .color(Color.WHITE)
-                        .talk(this, true, iProperty ->{
-                            if(entity.getSTATES().HP <= 0){
-                                sumG += entity.getSTATES().G;
-                                sumEXP += entity.getSTATES().EXP;
-                            }
-                            playerRecivedDamage(0);
-                            },
-                                ()->Component.get(this, "attack_enemy", player.getSTATES().NAME, entity.getSTATES().NAME, String.valueOf(E_RECIVED_DAMAGE))
-                        )
-                        .frame(50, 75, 120, 35, ()->Color.WHITE, Color.BLACK)
+        Animation.create(Main.scene, "", PropertiesTemplate.conv(iProperty ->{
+                                    if(entity.getSTATES().HP <= 0){
+                                        sumG += entity.getSTATES().G;
+                                        sumEXP += entity.getSTATES().EXP;
+                                    }
+                                    playerRecivedDamage(0);
+                                },
+                                ()->Component.get(this, "attack_enemy", player.getSTATES().NAME, entity.getSTATES().NAME, String.valueOf(E_RECIVED_DAMAGE)))
                 ,false).drawThisScene();
 
 
@@ -117,14 +121,8 @@ public abstract class AbstractBattle implements IBaseScene {
         if(i < enemy.length) {
             if(enemy[i].getSTATES().HP > 0) {
                 int P_RECIVED_DAMAGE = player.recivedATK(enemy[i].generateATK());
-                Animation.create(Main.scene, "",
-                        Properties.ofText(50, 80)
-                                .font(new Font("", Font.PLAIN, 32))
-                                .color(Color.WHITE)
-                                .talk(this, true, iProperty -> playerRecivedDamage(i + 1),
-                                        () -> Component.get(this, "attack_enemy", enemy[i].getSTATES().NAME, player.getSTATES().NAME, String.valueOf(P_RECIVED_DAMAGE))
-                                )
-                                .frame(50, 75, 120, 35, () -> Color.WHITE, Color.BLACK), false).drawThisScene();
+                Animation.create(Main.scene, "",PropertiesTemplate.conv(iProperty -> playerRecivedDamage(i + 1),
+                        () -> Component.get(this, "attack_enemy", enemy[i].getSTATES().NAME, player.getSTATES().NAME, String.valueOf(P_RECIVED_DAMAGE))) , false).drawThisScene();
             } else {
                 if(ifEnemiesHPAllZero()){
                     clearResult();
@@ -146,51 +144,38 @@ public abstract class AbstractBattle implements IBaseScene {
 
     private void gameOver() {
         Animation.create(Main.scene, "",
-                Properties.ofText(50, 80)
-                        .font(new Font("", Font.PLAIN, 32))
-                        .color(Color.WHITE)
-                        .talk(this, true, iProperty -> {
-                                    Event.get(AbstractBattle.class, "battle_free").clear();
-                                    Main.scene.changeScene(new Title());
-                                },
-                                () -> Component.get(this, "gameover")
-                        )
-                        .frame(50, 75, 120, 35, () -> Color.WHITE, Color.BLACK), false).drawThisScene();
+                PropertiesTemplate.conv( iProperty -> {
+                            Event.get(AbstractBattle.class, "battle_free").clear();
+                            Main.scene.changeScene(new Title());
+                        },
+                        () -> Component.get(this, "gameover")), false).drawThisScene();
     }
 
     private void clearResult() {
         final int base_lv = player.getSTATES().LV;
         player.addGold(sumG);
         player.addEXP(sumEXP);
-        Animation.create(Main.scene, "", Properties.ofText(50, 80)
-                        .font(new Font("", Font.PLAIN, 32))
-                        .color(Color.WHITE)
-                        .talk(this, true, iProperty -> {
-                                if(base_lv < player.getSTATES().LV)
-                                    levelUpMessage();
-                                else {
-                                    Event.get(AbstractBattle.class, "battle_free").setEvent(true);
-                                    Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
-                                    Main.scene.changeScene(new Menu(player));
-                                }
-                                },
-                                ()->Component.get(this, "clear.mes"),
-                                ()->Component.get(this, "clear.result", player.getSTATES().NAME, String.valueOf(sumEXP), String.valueOf(sumG))
-                                )
-                .frame(50, 75, 120, 35, () -> Color.WHITE, Color.BLACK)
+        Animation.create(Main.scene, "",
+                PropertiesTemplate.conv(iProperty -> {
+                            if(base_lv < player.getSTATES().LV)
+                                levelUpMessage();
+                            else {
+                                Event.get(AbstractBattle.class, "battle_free").setEvent(true);
+                                Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
+                                Main.scene.changeScene(new Menu(player));
+                            }
+                        },
+                        ()->Component.get(this, "clear.mes"),
+                        ()->Component.get(this, "clear.result", player.getSTATES().NAME, String.valueOf(sumEXP), String.valueOf(sumG)))
                 , false).drawThisScene();
     }
 
     private void levelUpMessage() {
-        Animation.create(Main.scene, "", Properties.ofText(50, 80)
-                        .font(new Font("", Font.PLAIN, 32))
-                        .color(Color.WHITE)
-                        .frame(50, 75, 120, 35, () -> Color.WHITE, Color.BLACK)
-                        .talk(this, true, iProperty ->{
-
-                            Event.get(AbstractBattle.class, "battle_free").setEvent(true);
-                            Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
-                            Main.scene.changeScene(new Menu(player));}, ()->Component.get(this, "levelup.mes"))
+        Animation.create(Main.scene, "",
+                PropertiesTemplate.conv(iProperty ->{
+                    Event.get(AbstractBattle.class, "battle_free").setEvent(true);
+                    Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
+                    Main.scene.changeScene(new Menu(player));}, ()->Component.get(this, "levelup.mes"))
                 , false).drawThisScene();
 
     }
