@@ -29,7 +29,7 @@ public class ChooseMap implements IBaseScene {
                         .font(new Font("", Font.PLAIN, 64)).center().color(Color.RED), true);
 
         AnimationList<String, Properties<String>> list =
-                new AnimationList<>(lunchScene, "Normal Embust", Properties.ofText().font(new Font("", Font.PLAIN, 32)).center(),
+                new AnimationList<>(lunchScene, Component.get(this, "slime"), Properties.ofText().font(new Font("", Font.PLAIN, 32)).center(),
                         ()-> lunchScene.changeScene(new Battle(player, StagesFactory.STAGE_0.get().getStates()))
                         );
         AnimationKeyButtons<String, AnimationList<String, Properties<String>>> alist =
