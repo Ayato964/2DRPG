@@ -7,8 +7,10 @@ import java.io.IOException;
 
 public class JsonComponent {
     public static final String STATES = "states";
+    public static final String STAGE = "stage";
+    public static final String STAGE_ESCAPE = "escape";
     public static final String ENEMY = "enemy";
-    public static final String ENEMY_LV = "lv";
+    public static final String ENEMY_MIN_LV = "lv";
     public static final String ENEMY_MAXLV = "maxLv";
     public static final String ENEMY_NUM = "num";
     public static final String ENEMY_ENTITIES = "entities";

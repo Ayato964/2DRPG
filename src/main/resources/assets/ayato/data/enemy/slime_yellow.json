@@ -1,0 +1,16 @@
+{
+  "name": "yellow_slime",
+  "hp": 50,
+  "uhp": 30,
+  "mp": 0,
+  "ump": 0,
+  "exp": 150,
+  "uexp": 30,
+  "g": 80,
+  "ug": 40,
+  "atk": 1,
+  "uatk": 1,
+  "pow": 10,
+  "defence": 0.001,
+  "udefence": 0.001
+}

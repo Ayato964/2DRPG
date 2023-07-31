@@ -18,6 +18,7 @@ import org.ayato.util.Event;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;
+import java.util.Random;
 
 public abstract class AbstractBattle implements IBaseScene {
     protected Player player;
@@ -80,10 +81,25 @@ public abstract class AbstractBattle implements IBaseScene {
                 CHOOSE.setVisible(true);
             });
         });
-        PLAYER_CHOOSE.add(Component.get(this, "escape"), ()-> System.out.println("Escaped!!!"));
+        PLAYER_CHOOSE.add(Component.get(this, "escape"), this::escape);
 
         CHOOSE = new AnimationKeyButtons<>(PLAYER_CHOOSE, 5, 75, 30, 40, Color.RED, Color.WHITE, Color.BLACK);
         CHOOSE.setVisible(true);
+    }
+
+    private void escape() {
+        int r = new Random().nextInt(0, 1000);
+        if(r < escapeChance()){
+            Animation.create(Main.scene, "", PropertiesTemplate
+                    .conv(iProperty -> Main.scene.changeScene(new Menu(player)),
+                            ()->Component.get(this, "escaped", player.getSTATES().NAME)),
+                    false).drawThisScene();
+        }else {
+            Animation.create(Main.scene, "", PropertiesTemplate.conv(
+                    iProperty -> playerRecivedDamage(0),
+                    ()->Component.get(this, "escape_failed", player.getSTATES().NAME)
+            ), false).drawThisScene();
+        }
     }
 
     protected abstract Enemy[] getEnemy(LunchScene MASTER);
@@ -187,4 +203,5 @@ public abstract class AbstractBattle implements IBaseScene {
         }
         return true;
     }
+    public abstract int escapeChance();
 }

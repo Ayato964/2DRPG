@@ -22,8 +22,8 @@ public class Enemy extends AbstractEntity{
         U_DEFENCE = entity_states.get(EnemyFactory.U_DF).asDouble();
         reset();
     }
-    public void setEnemyLevel(int playerLv, int maxLv){
-        STATES.LV = new Random().nextInt(STATES.LV, playerLv + maxLv - 1);
+    public void setEnemyLevel(int playerLv, int minLv,  int maxLv){
+        STATES.LV = new Random().nextInt(minLv, playerLv + maxLv);
         STATES = new EntityStates(
                 STATES.NAME,
                 STATES.LV,
@@ -32,6 +32,7 @@ public class Enemy extends AbstractEntity{
                 STATES.MP + STATES.LV * U_MP - U_MP,
                 STATES.G + STATES.LV * U_G - U_G,
                 STATES.ATK + STATES.LV * U_ATK - U_ATK,
+                STATES.POW_CHANCE,
                 STATES.DF + STATES.LV * U_DEFENCE - U_DEFENCE
         );
     }
@@ -40,12 +41,13 @@ public class Enemy extends AbstractEntity{
     protected void reset() {
         STATES = new EntityStates(
                 eStates.get(EnemyFactory.NAME).asText(),
-                eStates.get(EnemyFactory.MIN_LV).asInt(),
+                1,
                 eStates.get(EnemyFactory.HP).asInt(),
                 eStates.get(EnemyFactory.EXP).asInt(),
                 eStates.get(EnemyFactory.MP).asInt(),
                 eStates.get(EnemyFactory.G).asInt(),
                 eStates.get(EnemyFactory.ATK).asInt(),
+                eStates.get(EnemyFactory.POW).asInt(),
                 eStates.get(EnemyFactory.DF).asDouble()
                 );
     }

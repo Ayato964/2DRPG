@@ -3,6 +3,8 @@ package ayato.entity;
 import org.ayato.animation.image.ImageMaker;
 import org.ayato.system.LunchScene;
 
+import java.util.Random;
+
 public abstract class AbstractEntity {
     int X, Y, W, H;
     private ImageMaker AVATER;
@@ -43,6 +45,14 @@ public abstract class AbstractEntity {
     }
 
     public int generateATK() {
+        int r = new Random().nextInt(1, 1000);
+        System.out.println("USERNAME:: " + STATES.NAME + "  Random::" + r);
+        if(r < getSTATES().POW_CHANCE)
+            if(r < getSTATES().POW_CHANCE / 2) {
+                return STATES.ATK * 2;
+            }
+        else
+                return (int) (STATES.ATK * 1.5);
         return STATES.ATK;
     }
 

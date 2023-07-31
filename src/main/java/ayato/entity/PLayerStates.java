@@ -7,8 +7,8 @@ import java.util.function.Supplier;
 
 public class PLayerStates extends EntityStates {
     public int MEXP;
-    public PLayerStates(String name, int lv, int hp, int exp, int mp, int G, int atk, double df) {
-        super(name, lv, hp, exp, mp, G, atk, df);
+    public PLayerStates(String name, int lv, int hp, int exp, int mp, int G, int atk, int pow, double df) {
+        super(name, lv, hp, exp, mp, G, atk, pow,  df);
         MEXP = 80;
     }
 
@@ -30,9 +30,11 @@ public class PLayerStates extends EntityStates {
         MMP += 2 + new Random().nextInt(0, LV);
         ATK += 2 + new Random().nextInt(0, LV);
         DF += 0.001;
+        POW_CHANCE += 4;
 
         HP += MHP;
         MP += MMP;
+        System.out.println("upgrade::ATK" + ATK );
     }
 
     private int bounus() {

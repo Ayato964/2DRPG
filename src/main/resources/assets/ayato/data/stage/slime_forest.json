@@ -1,0 +1,14 @@
+{
+  "name": "slime_forest",
+  "states": {
+    "enemy": {
+      "lv": 3,
+      "maxLv": 3,
+      "num": 3,
+      "entities": ["slime_blue", "slime_red", "slime_yellow"]
+    },
+    "stage": {
+      "escape": 700
+    }
+  }
+}

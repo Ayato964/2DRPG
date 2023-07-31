@@ -10,10 +10,13 @@
   "ayato.scene.ChooseMap.title":"どこのマップのモンスターを殺して回りますか？",
   "ayato.entity.PLayerStates.player_states":"Lv.$ $  $/$HP   $/$MP   $/$EXP   $G",
   "ayato.scene.ChooseMap.slime":"青スライムの源",
-
+  "ayato.scene.ChooseMap.slime_forest":"スライムの森",
 
 
   "ayato.animation.AnimationEntities.blue_slime":"スライム(青)",
+  "ayato.animation.AnimationEntities.red_slime":"スライム（赤）",
+  "ayato.animation.AnimationEntities.yellow_slime":"スライム（黄）",
+
   "ayato.scene.Battle.attack":"攻撃",
   "ayato.scene.Battle.magic":"魔法",
   "ayato.scene.Battle.item":"アイテム",
@@ -25,6 +28,8 @@
   "ayato.scene.Battle.clear.result":"$は$EXPと$Gを手に入れた！！",
   "ayato.scene.Battle.levelup.mes":"おめでとう！レベルが上がったよ！！",
   "ayato.scene.Battle.gameover":"殺し合いに負けた",
+  "ayato.scene.Battle.escaped":"$は脱出した",
+  "ayato.scene.Battle.escape_failed":"$は脱出に失敗した",
   "ayato.system.Inn.heal_success":"全回復した",
   "ayato.system.Inn.empty_money":"お金が足りない",
   "ayato.system.Inn.mes1":"いらっしゃいませ。ここは宿です。",

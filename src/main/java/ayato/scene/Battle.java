@@ -25,8 +25,13 @@ public class Battle extends AbstractBattle{
 
         for(int i = 0; i < enemy.length; i ++){
             enemy[i] = EnemyFactory.ENEMIES.get(enemies.get(new Random().nextInt(enemies.size())).asText()).get();
-            enemy[i].setEnemyLevel(player.getSTATES().LV, enemy_states.get(JsonComponent.ENEMY_MAXLV).asInt());
+            enemy[i].setEnemyLevel(player.getSTATES().LV, enemy_states.get(JsonComponent.ENEMY_MIN_LV).asInt(), enemy_states.get(JsonComponent.ENEMY_MAXLV).asInt());
         }
         return enemy;
+    }
+
+    @Override
+    public int escapeChance() {
+        return stage_states.get(JsonComponent.STAGE).get(JsonComponent.STAGE_ESCAPE).asInt();
     }
 }

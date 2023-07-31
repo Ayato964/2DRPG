@@ -6,6 +6,9 @@
       "maxLv": 3,
       "num": 3,
       "entities": ["slime_blue"]
+    },
+    "stage": {
+      "escape": 900
     }
   }
 }
