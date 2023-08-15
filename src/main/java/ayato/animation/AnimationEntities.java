@@ -1,9 +1,7 @@
 package ayato.animation;
 
 import ayato.entity.AbstractEntity;
-import org.ayato.animation.Animation;
-import org.ayato.animation.AnimationList;
-import org.ayato.animation.Properties;
+import org.ayato.animation.*;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 
@@ -17,7 +15,7 @@ public class AnimationEntities implements KeyListener {
     private final Consumer<AbstractEntity> ACTION;
     private final LunchScene MASTER;
     private final AbstractEntity[] entities;
-    private final ArrayList<AnimationList<?, Properties<?>>> animationList;
+    private final ArrayList<AnimationList<?, Properties>> animationList;
     private final int x, y, w, h;
     private int count = -1, saveCount = 0;
     public AnimationEntities(LunchScene scene, AbstractEntity[] entity, Consumer<AbstractEntity> action,  int x, int y, int w, int h){
@@ -34,28 +32,31 @@ public class AnimationEntities implements KeyListener {
         for(int i = 0; i < entities.length; i ++) {
             final int finalI = i;
 
-            Animation.create(MASTER, entities[i].getAVATER(),
-                    Properties.ofImage(x + i * 55, y, 50, 50).ifView(()->entities[finalI].getSTATES().HP > 0), true);
-            Animation.create(MASTER, Component.get(this, entities[i].getSTATES().NAME),
-                    Properties.ofText(x + i * 55, y + 50)
+            Animation.create(MASTER, AnimationComponent.ofImage(entities[i].getAVATER()),
+                    PropertiesComponent.ofImage(x + i * 55, y, 50, 50).ifView(()->entities[finalI].getSTATES().HP > 0), true);
+
+            Animation.create(MASTER, AnimationComponent.ofText(Component.get(this, entities[i].getSTATES().NAME)),
+                    PropertiesComponent.ofText(x + i * 55, y + 50)
                             .ifView(()->entities[finalI].getSTATES().HP > 0)
                             .color(Color.WHITE).font(new Font("", Font.PLAIN, 24))
                             .frame(50, 25, ()->finalI == count ?Color.RED :Color.WHITE, Color.BLACK), true);
-            Animation.create(MASTER, entities[i].getLV(),
-                    Properties.ofText(x + i * 55, y + 55)
+
+            Animation.create(MASTER,AnimationComponent.ofText( entities[i].getLV()),
+                    PropertiesComponent.ofText(x + i * 55, y + 55)
                             .ifView(()->entities[finalI].getSTATES().HP > 0)
                             .font(new Font("", Font.PLAIN, 24))
                             .color(Color.WHITE)
                             .changeMessage(() ->entities[finalI].getLV()),true);
-            Animation.create(MASTER, entities[i].getHP(),
-                    Properties.ofText(x + i * 55, y + 60)
+
+            Animation.create(MASTER, AnimationComponent.ofText( entities[i].getHP()),
+                    PropertiesComponent.ofText(x + i * 55, y + 60)
                             .ifView(()->entities[finalI].getSTATES().HP > 0)
                             .font(new Font("", Font.PLAIN, 24))
                             .color(Color.WHITE).changeMessage(()->entities[finalI].getHP()),true
 
                     );
-            Animation.create(MASTER, entities[i].getMP(),
-                    Properties.ofText(x + i * 55, y + 65)
+            Animation.create(MASTER, AnimationComponent.ofText(entities[i].getMP()),
+                    PropertiesComponent.ofText(x + i * 55, y + 65)
                             .ifView(()->entities[finalI].getSTATES().HP > 0)
                             .font(new Font("", Font.PLAIN, 24))
                             .color(Color.WHITE)

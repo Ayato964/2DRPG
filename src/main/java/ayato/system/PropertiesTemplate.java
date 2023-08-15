@@ -1,14 +1,15 @@
 package ayato.system;
 
-import org.ayato.animation.Properties;
+import org.ayato.animation.PropertiesComponent;
+import org.ayato.animation.TextProperties;
 import org.ayato.animation.text.properties.PropertyAction;
 
 import java.awt.*;
 import java.util.function.Supplier;
 
 public class PropertiesTemplate {
-    public static Properties.TextProperties conv(PropertyAction action, Supplier<String>... strings){
-        return Properties.ofText(50, 80)
+    public static TextProperties conv(PropertyAction action, Supplier<String>... strings){
+        return PropertiesComponent.ofText(50, 80)
                 .font(new Font("", Font.PLAIN, 32))
                 .color(Color.WHITE)
                 .talk(null, true, action, strings)

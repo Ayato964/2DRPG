@@ -29,17 +29,16 @@ public class PLayerStates extends EntityStates {
         MHP += 10 + bounus();
         MMP += 2 + new Random().nextInt(0, LV);
         ATK += 2 + new Random().nextInt(0, LV);
-        DF += 0.001;
+        DF += 0.004;
         POW_CHANCE += 4;
 
         HP += MHP;
         MP += MMP;
-        System.out.println("upgrade::ATK" + ATK );
     }
 
     private int bounus() {
-        int r = new Random().nextInt(0, 100);
-        if(r >= 95 && r < 100) {
+        double r = new Random().nextDouble(0d, 1d);
+        if(r < 0.005 + DF) {
             return new Random().nextInt(0, LV);
         }
             return 0;

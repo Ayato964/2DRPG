@@ -38,5 +38,14 @@
   "ayato.system.Inn.mes3":"また、宿に泊まるとHPが全回復します",
   "ayato.system.Inn.mes4":"いかがなさいますか？",
   "ayato.system.Inn.yes":"はい",
-  "ayato.system.Inn.no":"いいえ"
+  "ayato.system.Inn.no":"いいえ",
+  "ayato.item.ItemFactory.potion_small":"回復薬(小)",
+  "ayato.item.ItemFactory.potion_medium":"回復薬(中)",
+  "ayato.item.ItemFactory.potion_large":"回復薬(大)",
+  "ayato.scene.Shop.select.mes":"購入したいものを選択してください。",
+  "ayato.scene.Shop.complete":"$を購入しました。",
+  "ayato.scene.Shop.not_cash":"お金が足りません",
+  "ayato.scene.Shop.back":"ショップから出る",
+  "ayato.item.HealPotion.use":"$は$を使った。$HP回復した",
+  "ayato.system.Inventory.not_item":"アイテムは何もない！！"
 }

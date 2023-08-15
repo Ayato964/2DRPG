@@ -47,17 +47,19 @@ public abstract class AbstractEntity {
     public int generateATK() {
         int r = new Random().nextInt(1, 1000);
         System.out.println("USERNAME:: " + STATES.NAME + "  Random::" + r);
-        if(r < getSTATES().POW_CHANCE)
-            if(r < getSTATES().POW_CHANCE / 2) {
+        if(r < getSTATES().POW_CHANCE) {
+            if (r < getSTATES().POW_CHANCE / 2) {
                 return STATES.ATK * 2;
             }
-        else
-                return (int) (STATES.ATK * 1.5);
+        }else {
+            return (int) (STATES.ATK * 1.5);
+        }
         return STATES.ATK;
     }
 
     public int recivedATK(int generateATK) {
         int l = (int) ( generateATK * (1 - STATES.DF));
+        System.out.println(STATES.NAME + "   Normal::" + generateATK + "    Defenced::" + l);
         STATES.HP -= l;
         return l;
     }
