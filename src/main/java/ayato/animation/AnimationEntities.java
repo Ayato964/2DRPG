@@ -119,6 +119,7 @@ public class AnimationEntities implements KeyListener {
                 }while (entities[count].getSTATES().HP <= 0);
                 break;
             case KeyEvent.VK_ENTER:ACTION.accept(entities[count]);saveCount = count; count = -1; MASTER.FRAME.removeKeyListener(this);break;
+            case KeyEvent.VK_ESCAPE:ACTION.accept(null);saveCount = count; count = -1; MASTER.FRAME.removeKeyListener(this);break;
         }
     }
 

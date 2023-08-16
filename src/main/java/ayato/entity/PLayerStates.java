@@ -37,8 +37,8 @@ public class PLayerStates extends EntityStates {
     }
 
     private int bounus() {
-        double r = new Random().nextDouble(0d, 1d);
-        if(r < 0.005 + DF) {
+        double r = new Random().nextInt(0,1000);
+        if(r < POW_CHANCE) {
             return new Random().nextInt(0, LV);
         }
             return 0;

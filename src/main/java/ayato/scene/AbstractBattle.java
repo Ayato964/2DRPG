@@ -70,7 +70,7 @@ public abstract class AbstractBattle implements IBaseScene {
             entities.begin();
         });
 
-        PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "magic")), ()-> System.out.println("Magic"));
+    //    PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "magic")), ()-> System.out.println("Magic"));
         PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "item")), ()-> {
                     Event.get(AbstractBattle.class, "battle_free").setEvent(false);
                     player.getSTATES().inventory.view(()->{
@@ -124,20 +124,25 @@ public abstract class AbstractBattle implements IBaseScene {
     }
 
     public void returnEnemyAction(AbstractEntity entity){
-        Event.get(AbstractBattle.class, "battle_free").setEvent(false);
-        Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
+        if(entity == null) {
+            Event.get(AbstractBattle.class, "battle_free").clear();
+            CHOOSE.setVisible(false);
+            CHOOSE.setVisible(true);
+        } else {
+            Event.get(AbstractBattle.class, "battle_free").setEvent(false);
+            Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
 
-        int E_RECIVED_DAMAGE = entity.recivedATK(player.generateATK());
-        Animation.create(Main.scene, AnimationComponent.ofText(""), PropertiesTemplate.conv(iProperty ->{
-                                    if(entity.getSTATES().HP <= 0){
-                                        sumG += entity.getSTATES().G;
-                                        sumEXP += entity.getSTATES().EXP;
-                                    }
-                                    playerRecivedDamage(0);
-                                },
-                                ()->Component.get(this, "attack_enemy", player.getSTATES().NAME, entity.getSTATES().NAME, String.valueOf(E_RECIVED_DAMAGE)))
-                ,false).drawThisScene();
-
+            int E_RECIVED_DAMAGE = entity.recivedATK(player.generateATK());
+            Animation.create(Main.scene, AnimationComponent.ofText(""), PropertiesTemplate.conv(iProperty -> {
+                                if (entity.getSTATES().HP <= 0) {
+                                    sumG += entity.getSTATES().G;
+                                    sumEXP += entity.getSTATES().EXP;
+                                }
+                                playerRecivedDamage(0);
+                            },
+                            () -> Component.get(this, "attack_enemy", player.getSTATES().NAME, entity.getSTATES().NAME, String.valueOf(E_RECIVED_DAMAGE)))
+                    , false).drawThisScene();
+        }
 
     }
 

@@ -31,7 +31,7 @@ public class ChooseMap implements IBaseScene {
         list.add(AnimationComponent.ofText(Component.get(this, "slime")),
                 ()-> lunchScene.changeScene(new Battle(player, StagesFactory.STAGE_0.get().getStates())));
         list.add(AnimationComponent.ofText(Component.get(this, "slime_forest")), ()->lunchScene.changeScene(new Battle(player, StagesFactory.SLIME_FOREST.get().getStates())));
-
+        list.add(AnimationComponent.ofText(Component.get(this, "back")), ()->lunchScene.changeScene(new Menu(player)));
         AnimationKeyButtons<String, AnimationList<String, Properties>> alist =
                 new AnimationKeyButtons<>(list, 0, 30, 100, 60, Color.RED, Color.WHITE, Color.BLACK);
         alist.setVisible(true);

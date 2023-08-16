@@ -4,26 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.2&#10;&#10;新マップ&#10;*スライムの森&#10;&#10;出現モンスター&#10;スライム(赤), スライム(青), スライム(黄)&#10;新キャラクター&#10;*スライム（赤）&#10;-&gt;体力は極端に低いが、攻撃力が極端に高い&#10;*スライム(青)&#10;-&gt;攻撃力は極端に低いが、体力が極端に高い&#10;&#10;システム&#10;Battle.javaにおいて、逃げる機能を追加">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/item/HealPotion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/item/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ShopMenuTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/system/Inventory.java" afterDir="false" />
+    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.3&#10;&#10;システム&#10;＊アイテムショップを追加&#10;＊プレイヤーにインベントリーの機能を追加&#10;＊戦闘中の回復システムを削除&#10;＊回復システムの代わりにアイテムを追加&#10;&#10;アイテム&#10;&#10;＊回復薬（小）　HPが５０回復する&#10;＊回復薬（中）　HPが１００回復する&#10;＊回復薬（大）　HPが１５０回復する">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/PlayerStatesScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/animation/AnimationEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/animation/AnimationEntities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/EntityStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/EntityStates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/PLayerStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/PLayerStates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Title.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/system/Inn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/system/Inn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/system/PropertiesTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/system/PropertiesTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/system/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/system/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +61,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ayato.scene" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\data\enemy" />
     </key>
@@ -186,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690792230390</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Version.1.3&#10;&#10;システム&#10;＊アイテムショップを追加&#10;＊プレイヤーにインベントリーの機能を追加&#10;＊戦闘中の回復システムを削除&#10;＊回復システムの代わりにアイテムを追加&#10;&#10;アイテム&#10;&#10;＊回復薬（小）　HPが５０回復する&#10;＊回復薬（中）　HPが１００回復する&#10;＊回復薬（大）　HPが１５０回復する">
+      <created>1692126482744</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1692126482744</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +207,7 @@
     <MESSAGE value="Version.1.0&#10;&#10;なんとなく作るRPG！&#10;ついにリリース！！&#10;青スライムだけをぼこぼこにするくそつまんねぇ爽快RPG!!!" />
     <MESSAGE value="Version.1.1&#10;&#10;下宿システムによる、回復システムを追加。&#10;&#10;宿に泊まると500Gと引き換えにHPが回復する。&#10;バトル中は1000G払うことで、超能力でHPが全回復する。&#10;&#10;敵キャラを強化&#10;プレイヤーを弱体化&#10;マップの強化！" />
     <MESSAGE value="Version.1.2&#10;&#10;新マップ&#10;*スライムの森&#10;&#10;出現モンスター&#10;スライム(赤), スライム(青), スライム(黄)&#10;新キャラクター&#10;*スライム（赤）&#10;-&gt;体力は極端に低いが、攻撃力が極端に高い&#10;*スライム(青)&#10;-&gt;攻撃力は極端に低いが、体力が極端に高い&#10;&#10;システム&#10;Battle.javaにおいて、逃げる機能を追加" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.1.2&#10;&#10;新マップ&#10;*スライムの森&#10;&#10;出現モンスター&#10;スライム(赤), スライム(青), スライム(黄)&#10;新キャラクター&#10;*スライム（赤）&#10;-&gt;体力は極端に低いが、攻撃力が極端に高い&#10;*スライム(青)&#10;-&gt;攻撃力は極端に低いが、体力が極端に高い&#10;&#10;システム&#10;Battle.javaにおいて、逃げる機能を追加" />
+    <MESSAGE value="Version.1.3&#10;&#10;システム&#10;＊アイテムショップを追加&#10;＊プレイヤーにインベントリーの機能を追加&#10;＊戦闘中の回復システムを削除&#10;＊回復システムの代わりにアイテムを追加&#10;&#10;アイテム&#10;&#10;＊回復薬（小）　HPが５０回復する&#10;＊回復薬（中）　HPが１００回復する&#10;＊回復薬（大）　HPが１５０回復する" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.1.3&#10;&#10;システム&#10;＊アイテムショップを追加&#10;＊プレイヤーにインベントリーの機能を追加&#10;＊戦闘中の回復システムを削除&#10;＊回復システムの代わりにアイテムを追加&#10;&#10;アイテム&#10;&#10;＊回復薬（小）　HPが５０回復する&#10;＊回復薬（中）　HPが１００回復する&#10;＊回復薬（大）　HPが１５０回復する" />
   </component>
 </project>

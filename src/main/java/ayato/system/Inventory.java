@@ -45,6 +45,11 @@ public class Inventory {
                     ac.action();
                 });
             }
+            list.add(AnimationComponent.ofText(Component.get(this, "back")), ()->{
+                LIST.setVisible(false);
+                ac.action();
+
+            });
             LIST = new AnimationKeyButtons<>(list, 30, 10, 100, 100, Color.RED, Color.WHITE, Color.BLACK);
             LIST.setVisible(true);
         }

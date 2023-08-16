@@ -3,9 +3,9 @@
   "ayato.scene.Title.title":"なんとなく作るRPG",
   "ayato.scene.Title.begin":"始める",
   "ayato.scene.Title.exit":"終わる",
-  "ayato.scene.Menu.battle":"敵を倒す(Beta)",
+  "ayato.scene.Menu.battle":"敵を倒す",
   "ayato.scene.Menu.hotel":"宿に泊まる",
-  "ayato.scene.Menu.shop":"ショップに行く（未実装）",
+  "ayato.scene.Menu.shop":"ショップに行く",
   "ayato.scene.Menu.selection":"どこに行くか選択してください",
   "ayato.scene.ChooseMap.title":"どこのマップのモンスターを殺して回りますか？",
   "ayato.entity.PLayerStates.player_states":"Lv.$ $  $/$HP   $/$MP   $/$EXP   $G",
@@ -46,5 +46,10 @@
   "ayato.scene.Shop.not_cash":"お金が足りません",
   "ayato.scene.Shop.back":"ショップから出る",
   "ayato.item.HealPotion.use":"$は$を使った。$HP回復した",
-  "ayato.system.Inventory.not_item":"アイテムは何もない！！"
+  "ayato.system.Inventory.not_item":"アイテムは何もない！！",
+  "ayato.scene.Menu.player_states":"現在のプレイヤーのステータスを見る",
+  "ayato.scene.PlayerStatesScene.df_and_luck":"ディフェンス能力:$  幸運能力:$",
+  "ayato.scene.PlayerStatesScene.back":"戻る",
+  "ayato.system.Inventory.back":"バトル選択へ戻る",
+  "ayato.scene.ChooseMap.back":"メニューへ戻る"
 }
