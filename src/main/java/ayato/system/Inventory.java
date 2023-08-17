@@ -38,14 +38,14 @@ public class Inventory {
 
             for (int i = 0; i < ITEMS.size(); i++) {
                 int finalI = i;
-                list.add(AnimationComponent.ofText(ITEMS.get(i).NAME), () -> {
+                list.add(AnimationComponent.ofText(ITEMS.get(i).NAME), l -> {
                     ITEMS.get(finalI).use(MASTER, STATES);
                     ITEMS.remove(ITEMS.get(finalI));
                     LIST.setVisible(false);
                     ac.action();
                 });
             }
-            list.add(AnimationComponent.ofText(Component.get(this, "back")), ()->{
+            list.add(AnimationComponent.ofText(Component.get(this, "back")), l->{
                 LIST.setVisible(false);
                 ac.action();
 

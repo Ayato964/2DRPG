@@ -24,8 +24,8 @@ public class Title implements IBaseScene {
         AnimationList<String, Properties> list = new AnimationList<>(executeScene,
                 PropertiesComponent.ofText().font(new Font("", Font.PLAIN, 32)));
 
-        list.add(AnimationComponent.ofText(Component.get(this, "begin")), () -> executeScene.changeScene(new Menu(new Player(executeScene, 0, 0, 0, 0))));
-        list.add(AnimationComponent.ofText(Component.get(this, "exit")), () -> System.exit(-1));
+        list.add(AnimationComponent.ofText(Component.get(this, "begin")), l -> executeScene.changeScene(new Menu(new Player(executeScene, 0, 0, 0, 0))));
+        list.add(AnimationComponent.ofText(Component.get(this, "exit")), l -> System.exit(-1));
 
         AnimationKeyButtons<String, AnimationList<String, Properties>> keyList =new AnimationKeyButtons<>(list, 20, 60, 120, 50, Color.RED, Color.WHITE, Color.BLACK);
 

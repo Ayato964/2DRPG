@@ -51,5 +51,7 @@
   "ayato.scene.PlayerStatesScene.df_and_luck":"ディフェンス能力:$  幸運能力:$",
   "ayato.scene.PlayerStatesScene.back":"戻る",
   "ayato.system.Inventory.back":"バトル選択へ戻る",
-  "ayato.scene.ChooseMap.back":"メニューへ戻る"
+  "ayato.scene.ChooseMap.back":"メニューへ戻る",
+  "ayato.scene.PlayerStatesScene.get_states":"ステータス",
+  "ayato.scene.PlayerStatesScene.get_armor":"防具"
 }

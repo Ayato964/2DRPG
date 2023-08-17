@@ -17,6 +17,8 @@ import java.awt.*;
 import java.util.Random;
 
 public abstract class AbstractBattle implements IBaseScene {
+    public static final Event.EventCard<?> BATTLE_FREE = Event.create(AbstractBattle.class, "battle_free", null);
+    public static final Event.EventCard<?> BATTLE_CHOOSE =   Event.create(AbstractBattle.class, "battle_choose", null);
     protected Player player;
     protected Enemy[] enemy;
     protected AnimationKeyButtons<String, AnimationList<String, Properties>> CHOOSE;
@@ -34,9 +36,8 @@ public abstract class AbstractBattle implements IBaseScene {
 
     @Override
     public void setup(LunchScene lunchScene) {
-        Event.create(AbstractBattle.class, "battle_free", null).clear();
-        Event.create(AbstractBattle.class, "battle_choose", null);
-
+        BATTLE_FREE.clear();
+        BATTLE_CHOOSE.setEvent(false);
         PLayerStates states = (PLayerStates) player.getSTATES();
         enemy = getEnemy(lunchScene);
 
@@ -65,29 +66,19 @@ public abstract class AbstractBattle implements IBaseScene {
                 new AnimationList<>(scene,
                         PropertiesComponent.ofText().font(new Font("", Font.PLAIN, 24)));
 
-        PLAYER_CHOOSE.add(AnimationComponent.ofText( Component.get(this, "attack")),  ()-> {
+        PLAYER_CHOOSE.add(AnimationComponent.ofText( Component.get(this, "attack")),  list-> {
             Event.get(AbstractBattle.class, "battle_choose").clear();
             entities.begin();
         });
 
     //    PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "magic")), ()-> System.out.println("Magic"));
-        PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "item")), ()-> {
+        PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "item")), list-> {
                     Event.get(AbstractBattle.class, "battle_free").setEvent(false);
                     player.getSTATES().inventory.view(()->{
                         Event.get(AbstractBattle.class, "battle_free").setEvent(true);
                         CHOOSE.setVisible(false);
                         CHOOSE.setVisible(true);
                     });
-                    /*
-            Inn.stayInn(Main.scene, player, 1000, iProperty -> {
-                Event.get(AbstractBattle.class, "battle_free").setEvent(true);
-                CHOOSE.setVisible(false);
-                CHOOSE.setVisible(true);
-             }
-
-
-            );
-                     */
         });
         PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "escape")), this::escape);
 
@@ -95,7 +86,7 @@ public abstract class AbstractBattle implements IBaseScene {
         CHOOSE.setVisible(true);
     }
 
-    private void escape() {
+    private void escape(AbstractAnimations<?, ?> list) {
         int r = new Random().nextInt(0, 1000);
         if(r < escapeChance()){
             Animation.create(Main.scene, AnimationComponent.ofText(""), PropertiesTemplate

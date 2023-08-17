@@ -27,8 +27,8 @@ public class Inn {
                 new AnimationList<>(scene, PropertiesComponent.ofText()
                                 .font(new Font("", Font.PLAIN, 32)));
 
-                l.add(AnimationComponent.ofText(Component.get(new Inn(), "yes")), ()->stayInn(scene, player, howMuch, action));
-                l.add(AnimationComponent.ofText(Component.get(new Inn(), "no")), ()-> scene.changeScene(new Menu(player)));
+                l.add(AnimationComponent.ofText(Component.get(new Inn(), "yes")), list->stayInn(scene, player, howMuch, action));
+                l.add(AnimationComponent.ofText(Component.get(new Inn(), "no")), list-> scene.changeScene(new Menu(player)));
 
         AnimationKeyButtons<String, AnimationList<String, Properties>> list =
                 new AnimationKeyButtons<>(l, 70, 20, 50, 50, Color.RED, Color.WHITE, Color.BLACK);

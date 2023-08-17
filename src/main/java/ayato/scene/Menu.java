@@ -29,10 +29,10 @@ public class Menu implements IBaseScene {
                 new AnimationList<>(lunchScene, PropertiesComponent.ofText().color(Color.WHITE)
                                 .font(new Font("", Font.PLAIN, 32)));
 
-        l.add(AnimationComponent.ofText(Component.get(this, "battle")), ()->lunchScene.changeScene(new ChooseMap(player)));
-        l.add(AnimationComponent.ofText(Component.get(this, "hotel")), ()-> lunchScene.changeScene(new InnScene(player)));
-        l.add(AnimationComponent.ofText(Component.get(this, "shop")), ()-> lunchScene.changeScene(new Shop(player, ShopMenuTemplate.HEALER.get())));
-        l.add(AnimationComponent.ofText(Component.get(this, "player_states")), ()->lunchScene.changeScene(new PlayerStatesScene(player)));
+        l.add(AnimationComponent.ofText(Component.get(this, "battle")), list->lunchScene.changeScene(new ChooseMap(player)));
+        l.add(AnimationComponent.ofText(Component.get(this, "hotel")), list-> lunchScene.changeScene(new InnScene(player)));
+        l.add(AnimationComponent.ofText(Component.get(this, "shop")), list-> lunchScene.changeScene(new Shop(player, ShopMenuTemplate.HEALER.get())));
+        l.add(AnimationComponent.ofText(Component.get(this, "player_states")), list->lunchScene.changeScene(new PlayerStatesScene(player)));
 
         AnimationKeyButtons<String, AnimationList<String, Properties>> list =
                 new AnimationKeyButtons<>(l, 20, 40, 100, 50, Color.RED, Color.WHITE, Color.BLACK);
