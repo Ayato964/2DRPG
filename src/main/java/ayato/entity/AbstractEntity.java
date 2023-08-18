@@ -1,5 +1,7 @@
 package ayato.entity;
 
+import ayato.system.Inventory;
+import ayato.system.ValueContainer;
 import org.ayato.animation.image.ImageMaker;
 import org.ayato.system.LunchScene;
 
@@ -45,21 +47,49 @@ public abstract class AbstractEntity {
     }
 
     public int generateATK() {
+        Inventory inv = STATES.inventory;
+        ValueContainer container = new ValueContainer() {
+            public int atk = STATES.ATK, pow_chance = STATES.POW_CHANCE;
+            @Override
+            public void set(int c, int v) {
+                switch (c){
+                    case ATK -> atk = v;
+                    case POW_CHANCE -> pow_chance = v;
+                }
+            }
+
+            @Override
+            public int count() {
+                return 2;
+            }
+
+            @Override
+            public int get(int c) {
+                return switch (c){
+                    case ATK -> atk;
+                    case POW_CHANCE -> pow_chance;
+                    default -> throw new IllegalStateException("Unexpected value: " + c);
+                };
+            }
+        };
+        if(inv.getWEAPON() != null)
+            inv.getWEAPON().effects(this, container);
+        if(inv.getRING() != null)
+            inv.getRING().effects(this, container);
         int r = new Random().nextInt(1, 1000);
-        System.out.println("USERNAME:: " + STATES.NAME + "  Random::" + r);
-        if(r < getSTATES().POW_CHANCE) {
-            if (r < getSTATES().POW_CHANCE / 2) {
-                return STATES.ATK * 2;
+        if(r < container.get(ValueContainer.POW_CHANCE)) {
+            if (r < container.get(ValueContainer.POW_CHANCE) / 2) {
+                return container.get(ValueContainer.ATK) * 2;
             }
         }else {
-            return (int) (STATES.ATK * 1.5);
+            return (int) (container.get(ValueContainer.ATK) * 1.5);
         }
-        return STATES.ATK;
+        return container.get(ValueContainer.ATK);
     }
 
     public int recivedATK(int generateATK) {
         int l = (int) ( generateATK * (1 - STATES.DF));
-        System.out.println(STATES.NAME + "   Normal::" + generateATK + "    Defenced::" + l);
+//        System.out.println(STATES.NAME + "   Normal::" + generateATK + "    Defenced::" + l);
         STATES.HP -= l;
         return l;
     }

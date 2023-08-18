@@ -38,14 +38,24 @@
   "ayato.system.Inn.mes4":"いかがなさいますか？",
   "ayato.system.Inn.yes":"はい",
   "ayato.system.Inn.no":"いいえ",
+
+
   "ayato.item.ItemFactory.potion_small":"回復薬(小)",
   "ayato.item.ItemFactory.potion_medium":"回復薬(中)",
   "ayato.item.ItemFactory.potion_large":"回復薬(大)",
+  "ayato.item.ItemFactory.wood_sword":"木の剣",
+  "ayato.item.ItemFactory.stone_sword":"石の剣",
+  "ayato.item.ItemFactory.iron_sword":"鉄の剣",
+  "ayato.item.ItemFactory.diamond_sword":"ダイアモンドの剣",
+
+
   "ayato.scene.Shop.select.mes":"購入したいものを選択してください。",
   "ayato.scene.Shop.complete":"$を購入しました。",
   "ayato.scene.Shop.not_cash":"お金が足りません",
   "ayato.scene.Shop.back":"ショップから出る",
   "ayato.item.HealPotion.use":"$は$を使った。$HP回復した",
+  "ayato.item.Item$1.not_effect":"このアイテムは使用できません。",
+
   "ayato.system.Inventory.not_item":"アイテムは何もない！！",
   "ayato.scene.Menu.player_states":"現在のプレイヤーのステータスを見る",
   "ayato.scene.PlayerStatesScene.df_and_luck":"ディフェンス能力:$  幸運能力:$",
@@ -53,5 +63,10 @@
   "ayato.system.Inventory.back":"バトル選択へ戻る",
   "ayato.scene.ChooseMap.back":"メニューへ戻る",
   "ayato.scene.PlayerStatesScene.get_states":"ステータス",
-  "ayato.scene.PlayerStatesScene.get_armor":"防具"
+  "ayato.scene.PlayerStatesScene.get_armor":"防具",
+  "ayato.scene.PlayerStatesScene.weapon":"武器　　　現在:$",
+  "ayato.scene.PlayerStatesScene.armor":"防具　　　現在:$",
+  "ayato.scene.PlayerStatesScene.necklace":"首輪　　　現在:$",
+  "ayato.scene.PlayerStatesScene.ring":"指輪　　　現在:$",
+  "ayato.scene.PlayerStatesScene.not_match":"このアイテムは装備できません"
 }
