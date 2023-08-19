@@ -7,9 +7,9 @@ public class EntityStates {
     public int HP, MHP, LV, EXP, MP, MMP, G, ATK;
     public Inventory inventory;
     public int POW_CHANCE;
-    public double DF;
+    public int DF;
     public String NAME;
-    public EntityStates(String name, int lv, int hp, int exp, int mp, int G, int atk, int POW_CHANCE, double df){
+    public EntityStates(String name, int lv, int hp, int exp, int mp, int G, int atk, int POW_CHANCE, int df){
         NAME = name;
         LV = lv;
         HP = hp;
@@ -19,7 +19,7 @@ public class EntityStates {
         MMP = mp;
         this.G = G;
         ATK = atk;
-        DF = Math.min(df, 1.0d);
+        DF = Math.min(df, 1000);
         this.POW_CHANCE = Math.min(POW_CHANCE, 1000);
         inventory = new Inventory(Main.scene, this);
     }

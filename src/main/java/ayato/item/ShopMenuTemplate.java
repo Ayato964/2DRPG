@@ -20,6 +20,10 @@ public class ShopMenuTemplate {
                 items.add(ItemFactory.STONE_SWORD.get());
                 items.add(ItemFactory.IRON_SWORD.get());
                 items.add(ItemFactory.DIAMOND_SWORD.get());
+                items.add(ItemFactory.COMMON_CHEST.get());
+                items.add(ItemFactory.UNCOMMON_CHEST.get());
+                items.add(ItemFactory.REA_CHEST.get());
+                items.add(ItemFactory.EPIC_CHEST.get());
                 return items;
             }, "all");
 

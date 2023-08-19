@@ -11,7 +11,7 @@ public class Player extends AbstractEntity{
 
     @Override
     protected void reset() {
-        setSTATES(new PLayerStates("Player", 1, 30, 0, 20, 500, 5, 50, 0.0d));
+        setSTATES(new PLayerStates("Player", 1, 30, 0, 20, 500, 5, 50, 0));
     }
 
     public void addGold(int sumG) {

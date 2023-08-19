@@ -77,19 +77,42 @@ public abstract class AbstractEntity {
         if(inv.getRING() != null)
             inv.getRING().effects(this, container);
         int r = new Random().nextInt(1, 1000);
-        if(r < container.get(ValueContainer.POW_CHANCE)) {
-            if (r < container.get(ValueContainer.POW_CHANCE) / 2) {
+        if(r < container.get(ValueContainer.POW_CHANCE))
+            if (r < container.get(ValueContainer.POW_CHANCE) / 2)
                 return container.get(ValueContainer.ATK) * 2;
-            }
-        }else {
-            return (int) (container.get(ValueContainer.ATK) * 1.5);
-        }
+            else
+                return (int) (container.get(ValueContainer.ATK) * 1.5);
         return container.get(ValueContainer.ATK);
     }
 
     public int recivedATK(int generateATK) {
-        int l = (int) ( generateATK * (1 - STATES.DF));
-//        System.out.println(STATES.NAME + "   Normal::" + generateATK + "    Defenced::" + l);
+        Inventory inv = STATES.inventory;
+        ValueContainer container = new ValueContainer() {
+            int df = STATES.DF;
+            @Override
+            public void set(int c, int v) {
+                if(c == DF)
+                    df = v;
+            }
+
+            @Override
+            public int count() {
+                return 1;
+            }
+
+            @Override
+            public int get(int c) {
+                return c == DF ? df : -1;
+            }
+        };
+
+        if(inv.getARMOR() != null)
+            inv.getARMOR().effects(this, container);
+        if(inv.getNECKLACE() != null)
+            inv.getNECKLACE().effects(this, container);
+
+        double d = container.get(ValueContainer.DF) / 100d;
+        int l = (int) ( generateATK * (1 - d));
         STATES.HP -= l;
         return l;
     }

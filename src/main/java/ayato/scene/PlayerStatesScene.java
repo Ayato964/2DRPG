@@ -96,8 +96,9 @@ public class PlayerStatesScene implements IBaseScene {
     }
 
     private void playerStates(LunchScene lunchScene){
+        PLayerStates states = ((PLayerStates) PLAYER.getSTATES());
         AnimationKeyButtons<String, AnimationList<String, Properties>> LL;
-        Animation.create(lunchScene, AnimationComponent.ofText(((PLayerStates) PLAYER.getSTATES()).getString().get()),
+        Animation.create(lunchScene, AnimationComponent.ofText(states.getString().get() + "   " + states.ATK),
                 PropertiesComponent.ofText(10, 50)
                         .font(new Font("", Font.PLAIN, 32))
                         .color(Color.WHITE)

@@ -11,6 +11,6 @@
   "atk": 2,
   "uatk": 2,
   "pow": 0,
-  "defence": 0.001,
-  "udefence": 0.001
+  "defence": 1,
+  "udefence": 1
 }

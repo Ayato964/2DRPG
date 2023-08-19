@@ -43,10 +43,16 @@
   "ayato.item.ItemFactory.potion_small":"回復薬(小)",
   "ayato.item.ItemFactory.potion_medium":"回復薬(中)",
   "ayato.item.ItemFactory.potion_large":"回復薬(大)",
+
   "ayato.item.ItemFactory.wood_sword":"木の剣",
   "ayato.item.ItemFactory.stone_sword":"石の剣",
   "ayato.item.ItemFactory.iron_sword":"鉄の剣",
   "ayato.item.ItemFactory.diamond_sword":"ダイアモンドの剣",
+
+  "ayato.item.ItemFactory.common_chest":"胴当てMark.1",
+  "ayato.item.ItemFactory.uncommon_chest":"胴当てMark.2",
+  "ayato.item.ItemFactory.rea_chest":"胴当てMark.3",
+  "ayato.item.ItemFactory.epic_chest":"胴当てMark.4",
 
 
   "ayato.scene.Shop.select.mes":"購入したいものを選択してください。",
