@@ -12,5 +12,7 @@
   "uatk": 2,
   "pow": 0,
   "defence": 1,
-  "udefence": 1
+  "udefence": 1,
+  "avoid": 1,
+  "uavoid": 1
 }

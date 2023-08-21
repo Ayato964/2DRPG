@@ -10,7 +10,7 @@ import java.util.Random;
 public class Enemy extends AbstractEntity{
     JsonNode eStates;
     private final int U_HP, U_MP, U_G, U_ATK, U_EXP;
-    private final int U_DEFENCE;
+    private final int U_DEFENCE, U_AVOID;
     public Enemy(LunchScene m, ImageMaker maker, JsonNode entity_states) {
         super(m, maker, 0, 0, 0, 0);
         eStates = entity_states;
@@ -20,6 +20,7 @@ public class Enemy extends AbstractEntity{
         U_EXP = entity_states.get(EnemyFactory.U_EXP).asInt();
         U_MP = entity_states.get(EnemyFactory.U_MP).asInt();
         U_DEFENCE = entity_states.get(EnemyFactory.U_DF).asInt();
+        U_AVOID = entity_states.get(EnemyFactory.U_AVOID).asInt();
         reset();
     }
     public void setEnemyLevel(int playerLv, int minLv,  int maxLv){
@@ -33,7 +34,8 @@ public class Enemy extends AbstractEntity{
                 STATES.G + STATES.LV * U_G - U_G,
                 STATES.ATK + STATES.LV * U_ATK - U_ATK,
                 STATES.POW_CHANCE,
-                STATES.DF + STATES.LV * U_DEFENCE - U_DEFENCE
+                STATES.DF + STATES.LV * U_DEFENCE - U_DEFENCE,
+                STATES.AVOID + STATES.LV * U_AVOID - U_AVOID
         );
     }
 
@@ -48,7 +50,8 @@ public class Enemy extends AbstractEntity{
                 eStates.get(EnemyFactory.G).asInt(),
                 eStates.get(EnemyFactory.ATK).asInt(),
                 eStates.get(EnemyFactory.POW).asInt(),
-                eStates.get(EnemyFactory.DF).asInt()
+                eStates.get(EnemyFactory.DF).asInt(),
+                eStates.get(EnemyFactory.AVOID).asInt()
                 );
     }
 }

@@ -22,6 +22,8 @@ public class EnemyFactory {
     public static final String ATK = "atk";
     public static final String U_ATK = "uatk";
     public static final String POW = "pow";
+    public static final String U_AVOID = "uavoid";
+    public static final String AVOID = "avoid";
     public static final RegistoryList<Enemy> ENEMIES =
             RegistoryList.create(Main.scene, "enemy");
 

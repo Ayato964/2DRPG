@@ -1,6 +1,7 @@
 package ayato.scene;
 
 import ayato.animation.AnimationEntities;
+import ayato.effect.Effect;
 import ayato.entity.AbstractEntity;
 import ayato.entity.Enemy;
 import ayato.entity.PLayerStates;
@@ -78,12 +79,24 @@ public abstract class AbstractBattle implements IBaseScene {
                         Event.get(AbstractBattle.class, "battle_free").setEvent(true);
                         CHOOSE.setVisible(false);
                         CHOOSE.setVisible(true);
+                        viewEffect(scene);
                     });
         });
         PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "escape")), this::escape);
 
         CHOOSE = new AnimationKeyButtons<>(PLAYER_CHOOSE, 5, 75, 30, 40, Color.RED, Color.WHITE, Color.BLACK);
         CHOOSE.setVisible(true);
+
+        viewEffect(scene);
+    }
+
+    private void viewEffect(LunchScene scene) {
+        int x = scene.FRAME.DESCTOP_BOUNDS.width / scene.FRAME.DW, y = 50, w = 10, h = 10;
+        x -= w;
+        for(int i= 0; i < player.getEffects().size(); i ++){
+            if(!player.getEffects().get(i).isView)
+                player.getEffects().get(i).view(scene, x - i * (w + 5), y, w, h);
+        }
     }
 
     private void escape(AbstractAnimations<?, ?> list) {
@@ -131,7 +144,7 @@ public abstract class AbstractBattle implements IBaseScene {
                                 }
                                 playerRecivedDamage(0);
                             },
-                            () -> Component.get(this, "attack_enemy", player.getSTATES().NAME, entity.getSTATES().NAME, String.valueOf(E_RECIVED_DAMAGE)))
+                            () -> Component.get(this, E_RECIVED_DAMAGE == 0 ? "attack_field_enemy" : "attack_enemy", player.getSTATES().NAME, entity.getSTATES().NAME, String.valueOf(E_RECIVED_DAMAGE)))
                     , false).drawThisScene();
         }
 
@@ -142,7 +155,7 @@ public abstract class AbstractBattle implements IBaseScene {
             if(enemy[i].getSTATES().HP > 0) {
                 int P_RECIVED_DAMAGE = player.recivedATK(enemy[i].generateATK());
                 Animation.create(Main.scene, AnimationComponent.ofText(""),PropertiesTemplate.conv(iProperty -> playerRecivedDamage(i + 1),
-                        () -> Component.get(this, "attack_enemy", enemy[i].getSTATES().NAME, player.getSTATES().NAME, String.valueOf(P_RECIVED_DAMAGE))) , false).drawThisScene();
+                        () -> Component.get(this, P_RECIVED_DAMAGE == 0? "attack_field_enemy" : "attack_enemy", enemy[i].getSTATES().NAME, player.getSTATES().NAME, String.valueOf(P_RECIVED_DAMAGE))) , false).drawThisScene();
             } else {
                 if(ifEnemiesHPAllZero()){
                     clearResult();
@@ -185,6 +198,8 @@ public abstract class AbstractBattle implements IBaseScene {
                                 Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
                                 Main.scene.changeScene(new Menu(player));
                             }
+                            for(Effect e : player.getEffects())
+                                e.isView = false;
                         },
                         ()->Component.get(this, "clear.mes"),
                         ()->Component.get(this, "clear.result", player.getSTATES().NAME, String.valueOf(sumEXP), String.valueOf(sumG)))

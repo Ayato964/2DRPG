@@ -1,6 +1,7 @@
 package ayato.entity;
 
 import ayato.effect.Effect;
+import ayato.system.Debug;
 import ayato.system.Inventory;
 import ayato.system.ValueContainer;
 import org.ayato.animation.image.ImageMaker;
@@ -105,11 +106,13 @@ public abstract class AbstractEntity {
     public int recivedATK(int generateATK) {
         Inventory inv = STATES.inventory;
         ValueContainer container = new ValueContainer() {
-            int df = STATES.DF;
+            int df = STATES.DF, avoid = STATES.AVOID;
             @Override
             public void set(int c, int v) {
-                if(c == DF)
-                    df = v;
+                switch (c){
+                    case DF -> df = v;
+                    case AVOID -> avoid = v;
+                }
             }
 
             @Override
@@ -119,7 +122,11 @@ public abstract class AbstractEntity {
 
             @Override
             public int get(int c) {
-                return c == DF ? df : -1;
+                return switch (c){
+                    case DF -> df;
+                    case AVOID -> avoid;
+                    default -> throw new IllegalStateException("Unexpected value: " + c);
+                };
             }
         };
 
@@ -130,8 +137,13 @@ public abstract class AbstractEntity {
         runReinEffect(container);
 
         double d = container.get(ValueContainer.DF) / 1000d;
+        int r = new Random().nextInt(0, 1000);
+        Debug.method(()-> System.out.println(STATES.NAME + "   avoid:" + r));
         int l = (int) ( generateATK * (1 - d));
-        STATES.HP -= l;
-        return l;
+        if(r > container.get(ValueContainer.AVOID)) {
+            STATES.HP -= l;
+            return l;
+        }else 
+            return 0;
     }
 }

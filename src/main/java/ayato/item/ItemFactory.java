@@ -24,7 +24,8 @@ public class ItemFactory {
     public static final RegistoryObject<Item> POTION_LARGE =
             ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_large"), 150, 1400), "potion_large");
     public static final RegistoryObject<Item> EFFECT_HEAL_POTION_SMALL =
-            ITEMS.create(()-> new HealEffectPotion(Component.get(INSTANCE, "e_potion_small"), 100), "e_potion_small");
+            ITEMS.create(()-> new HealEffectPotion(Component.get(INSTANCE, "e_potion_small"), 750), "e_potion_small");
+
 
     /**
      * Armors
