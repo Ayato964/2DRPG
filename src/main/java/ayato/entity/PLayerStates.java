@@ -28,8 +28,8 @@ public class PLayerStates extends EntityStates {
         LV ++;
         MHP += 10 + bounus();
         MMP += 2 + bounus();
-        ATK += 2 + bounus();
-        DF += 0.004;
+        ATK += 3 + bounus();
+        DF += 4;
         POW_CHANCE += 4;
 
         HP += MHP;

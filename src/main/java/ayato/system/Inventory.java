@@ -35,21 +35,29 @@ public class Inventory {
     }
 
     public void setARMOR(Armor ARMOR) {
+        if(this.ARMOR != null)
+            ITEMS.add((Item) this.ARMOR);
         this.ARMOR = ARMOR;
         remove((Item) ARMOR);
     }
 
     public void setNECKLACE(Necklace NECKLACE) {
+        if(this.NECKLACE != null)
+            ITEMS.add((Item) this.NECKLACE);
         this.NECKLACE = NECKLACE;
         remove((Item) NECKLACE);
     }
 
     public void setRING(Ring RING) {
+        if(this.RING != null)
+            ITEMS.add((Item) this.RING);
         this.RING = RING;
         remove((Item) RING);
     }
 
     public void setWEAPON(Weapon WEAPON) {
+        if(this.WEAPON != null)
+            ITEMS.add((Item) this.WEAPON);
         this.WEAPON = WEAPON;
         remove((Item) WEAPON);
     }

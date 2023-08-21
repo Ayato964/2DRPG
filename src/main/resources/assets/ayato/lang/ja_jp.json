@@ -11,8 +11,9 @@
   "ayato.entity.PLayerStates.player_states":"Lv.$ $  $/$HP   $/$MP   $/$EXP   $G",
   "ayato.scene.ChooseMap.slime":"青スライムの源",
   "ayato.scene.ChooseMap.slime_forest":"スライムの森",
+  "ayato.scene.ChooseMap.tutorial":"入門",
 
-
+  "ayato.animation.AnimationEntities.tutorial":"ただの鹿",
   "ayato.animation.AnimationEntities.blue_slime":"スライム(青)",
   "ayato.animation.AnimationEntities.red_slime":"スライム（赤）",
   "ayato.animation.AnimationEntities.yellow_slime":"スライム（黄）",

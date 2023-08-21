@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.4&#10;&#10;システム&#10;武器や装備の概念を追加&#10;&#10;アイテム&#10;＊木の剣&#10;＊石の剣&#10;＊鉄の剣&#10;＊ダイアモンドの剣">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/item/armors/Chest.java" afterDir="false" />
+    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.4.15&#10;&#10;システム&#10;デバッグモードを追加">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/tutorial.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/tutorial.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/enemy/tutorial.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/EntityStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/EntityStates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/PLayerStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/PLayerStates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/ShopMenuTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ShopMenuTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/rpg/EnemyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/rpg/EnemyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/rpg/StagesFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/rpg/StagesFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/PlayerStatesScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/PlayerStatesScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_blue.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_blue.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/system/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/system/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_red.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_red.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_yellow.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_yellow.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
@@ -226,7 +229,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692390790747</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Version.1.4.14&#10;&#10;アイテム&#10;＊胴当てMark.1&#10;＊胴当てMark.2&#10;＊胴当てMark.3&#10;＊胴当てMark.4">
+      <created>1692486814860</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1692486814860</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Version.1.4.15&#10;&#10;システム&#10;デバッグモードを追加">
+      <created>1692486937207</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1692486937207</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,6 +269,8 @@
     <MESSAGE value="Version.1.3.9&#10;&#10;システム&#10;Menu.java&#10;プレイヤーのステータスを見れるようになった。&#10;全ての選択肢において、キャンセルが可能になった。" />
     <MESSAGE value="Version.1.3.20&#10;&#10;システム&#10;ToonLib2パッケージのアップグレードに対応した" />
     <MESSAGE value="Version.1.4&#10;&#10;システム&#10;武器や装備の概念を追加&#10;&#10;アイテム&#10;＊木の剣&#10;＊石の剣&#10;＊鉄の剣&#10;＊ダイアモンドの剣" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.1.4&#10;&#10;システム&#10;武器や装備の概念を追加&#10;&#10;アイテム&#10;＊木の剣&#10;＊石の剣&#10;＊鉄の剣&#10;＊ダイアモンドの剣" />
+    <MESSAGE value="Version.1.4.14&#10;&#10;アイテム&#10;＊胴当てMark.1&#10;＊胴当てMark.2&#10;＊胴当てMark.3&#10;＊胴当てMark.4" />
+    <MESSAGE value="Version.1.4.15&#10;&#10;システム&#10;デバッグモードを追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.1.4.15&#10;&#10;システム&#10;デバッグモードを追加" />
   </component>
 </project>

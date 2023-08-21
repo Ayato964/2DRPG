@@ -1,0 +1,16 @@
+{
+  "name": "tutorial",
+  "hp": 5,
+  "uhp": 1,
+  "mp": 0,
+  "ump": 0,
+  "exp": 80,
+  "uexp": 0,
+  "g": 10,
+  "ug": 0,
+  "atk": 1,
+  "uatk": 0,
+  "pow": 1,
+  "defence": 1,
+  "udefence": 0
+}

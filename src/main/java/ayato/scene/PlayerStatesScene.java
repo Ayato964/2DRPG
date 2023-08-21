@@ -12,11 +12,13 @@ import ayato.system.PropertiesTemplate;
 import org.ayato.animation.*;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
+import org.ayato.util.Event;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;
 
 public class PlayerStatesScene implements IBaseScene {
+    private final Event.EventCard<?> VIEW_STATES = Event.create(PlayerStatesScene.class, "states", null);
     private AnimationKeyButtons<String, AnimationList<String, Properties>> CHOOSE_LIST;
     public final Player PLAYER;
     public PlayerStatesScene(Player player) {
@@ -33,7 +35,10 @@ public class PlayerStatesScene implements IBaseScene {
         AnimationList<String, Properties> CHOOSE = new AnimationList<>(lunchScene, PropertiesComponent.ofText().color(Color.WHITE)
                 .font(new Font("", Font.PLAIN, 32)));
 
-        CHOOSE.add(AnimationComponent.ofText(Component.get(this, "get_states")), i->playerStates(lunchScene));
+        CHOOSE.add(AnimationComponent.ofText(Component.get(this, "get_states")), i->{
+            VIEW_STATES.setEvent(true);
+            playerStates(lunchScene);
+        });
         CHOOSE.add(AnimationComponent.ofText(Component.get(this, "get_armor")), i->armorSetting(lunchScene));
         CHOOSE.add(AnimationComponent.ofText(Component.get(this, "back")), i->lunchScene.changeScene(new Menu(PLAYER)));
         CHOOSE_LIST = new AnimationKeyButtons<>(CHOOSE, 10, 50, 30, 50, Color.RED, Color.WHITE, Color.BLACK);
@@ -100,6 +105,7 @@ public class PlayerStatesScene implements IBaseScene {
         AnimationKeyButtons<String, AnimationList<String, Properties>> LL;
         Animation.create(lunchScene, AnimationComponent.ofText(states.getString().get() + "   " + states.ATK),
                 PropertiesComponent.ofText(10, 50)
+                        .ifView(VIEW_STATES::getEvent)
                         .font(new Font("", Font.PLAIN, 32))
                         .color(Color.WHITE)
                         .center()
@@ -108,6 +114,7 @@ public class PlayerStatesScene implements IBaseScene {
                         String.valueOf(PLAYER.getSTATES().DF),
                         String.valueOf(PLAYER.getSTATES().POW_CHANCE))),
                 PropertiesComponent.ofText(10, 60)
+                        .ifView(VIEW_STATES::getEvent)
                         .font(new Font("", Font.PLAIN, 32))
                         .color(Color.WHITE)
                         .center()
@@ -120,6 +127,7 @@ public class PlayerStatesScene implements IBaseScene {
             CHOOSE_LIST.setVisible(false);
             CHOOSE_LIST.setVisible(true);
             list.setVisible(false);
+            VIEW_STATES.setEvent(false);
         });
         LL =
                 new AnimationKeyButtons<>(L, 40, 50, 30, 20, Color.RED, Color.WHITE, Color.BLACK);

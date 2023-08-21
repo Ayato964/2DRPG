@@ -35,7 +35,7 @@ public class Shop implements IBaseScene {
 
         for(int i = 0; i < SEAL_ITEM.size(); i ++){
             final int finalI = i;
-           LIST.add(AnimationComponent.ofText(SEAL_ITEM.get(i).NAME), list-> buy(lunchScene, finalI));
+           LIST.add(AnimationComponent.ofText(SEAL_ITEM.get(i).NAME + "   " + SEAL_ITEM.get(i).G + "G"), list-> buy(lunchScene, finalI));
         }
         LIST.add(AnimationComponent.ofText(Component.get(this, "back")), list->lunchScene.changeScene(new Menu(player)));
 

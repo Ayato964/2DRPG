@@ -28,13 +28,13 @@ public class ItemFactory {
      * Armors
      */
     public static final RegistoryObject<Item> WOOD_SWORD =
-            ITEMS.create(()->new Sword(Component.get(INSTANCE, "wood_sword"), 10,2500), "wood_sword");
+            ITEMS.create(()->new Sword(Component.get(INSTANCE, "wood_sword"), 15,2000), "wood_sword");
     public static final RegistoryObject<Item> STONE_SWORD =
-            ITEMS.create(()->new Sword(Component.get(INSTANCE, "stone_sword"), 16,5000), "stone_sword");
+            ITEMS.create(()->new Sword(Component.get(INSTANCE, "stone_sword"), 20,5000), "stone_sword");
     public static final RegistoryObject<Item> IRON_SWORD =
-            ITEMS.create(()->new Sword(Component.get(INSTANCE, "iron_sword"), 22,7500), "iron_sword");
+            ITEMS.create(()->new Sword(Component.get(INSTANCE, "iron_sword"), 25,7500), "iron_sword");
     public static final RegistoryObject<Item> DIAMOND_SWORD =
-            ITEMS.create(()->new Sword(Component.get(INSTANCE, "diamond_sword"), 28,10000), "diamond_sword");
+            ITEMS.create(()->new Sword(Component.get(INSTANCE, "diamond_sword"), 30,10000), "diamond_sword");
 
     public static final RegistoryObject<Item > COMMON_CHEST =
             ITEMS.create(()->new Chest(Component.get(INSTANCE, "common_chest"), 100, 2500), "common_chest");

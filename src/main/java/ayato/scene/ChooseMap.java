@@ -27,6 +27,10 @@ public class ChooseMap implements IBaseScene {
 
         AnimationList<String, Properties> list =
                 new AnimationList<>(lunchScene, PropertiesComponent.ofText().font(new Font("", Font.PLAIN, 32)).center());
+        if(player.getSTATES().LV < 2) {
+            list.add(AnimationComponent.ofText(Component.get(this, "tutorial")),
+                    l -> lunchScene.changeScene(new Battle(player, StagesFactory.TUTORIAL.get().getStates())));
+        }
 
         list.add(AnimationComponent.ofText(Component.get(this, "slime")),
                 l-> lunchScene.changeScene(new Battle(player, StagesFactory.STAGE_0.get().getStates())));

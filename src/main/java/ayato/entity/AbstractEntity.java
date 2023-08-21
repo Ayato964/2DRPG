@@ -111,7 +111,7 @@ public abstract class AbstractEntity {
         if(inv.getNECKLACE() != null)
             inv.getNECKLACE().effects(this, container);
 
-        double d = container.get(ValueContainer.DF) / 100d;
+        double d = container.get(ValueContainer.DF) / 1000d;
         int l = (int) ( generateATK * (1 - d));
         STATES.HP -= l;
         return l;

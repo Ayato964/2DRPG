@@ -1,0 +1,14 @@
+{
+  "name": "tutorial",
+  "states": {
+    "enemy": {
+      "lv": 1,
+      "maxLv": 1,
+      "num": 1,
+      "entities": ["tutorial"]
+    },
+    "stage": {
+      "escape": 1000
+    }
+  }
+}
