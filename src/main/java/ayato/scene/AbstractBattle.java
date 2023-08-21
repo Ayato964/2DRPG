@@ -154,6 +154,7 @@ public abstract class AbstractBattle implements IBaseScene {
             if(player.getSTATES().HP <= 0){
                 gameOver();
             }else {
+                player.runEffect();
                 Event.get(AbstractBattle.class, "battle_free").clear();
                 CHOOSE.setVisible(false);
                 CHOOSE.setVisible(true);

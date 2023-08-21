@@ -1,11 +1,13 @@
 package ayato.entity;
 
+import ayato.effect.Effect;
 import ayato.system.Inventory;
 import ayato.system.ValueContainer;
 import org.ayato.animation.image.ImageMaker;
 import org.ayato.system.LunchScene;
 
 import java.util.Random;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public abstract class AbstractEntity {
     int X, Y, W, H;
@@ -19,6 +21,9 @@ public abstract class AbstractEntity {
         H = h;
         MASTER = m;
         AVATER = maker;
+    }
+    public CopyOnWriteArrayList<Effect> getEffects(){
+        return STATES.effects;
     }
 
     public ImageMaker getAVATER() {
@@ -44,6 +49,17 @@ public abstract class AbstractEntity {
     }
     public String getMP(){
         return STATES.MP + "/" + STATES.MMP + "MP";
+    }
+
+    public void runEffect(){
+        for(Effect e : STATES.effects){
+            e.lunch(MASTER, this);
+        }
+    }
+    public void runReinEffect(ValueContainer container){
+        for(Effect e : STATES.effects){
+            e.effects(this, container);
+        }
     }
 
     public int generateATK() {
@@ -76,6 +92,7 @@ public abstract class AbstractEntity {
             inv.getWEAPON().effects(this, container);
         if(inv.getRING() != null)
             inv.getRING().effects(this, container);
+        runReinEffect(container);
         int r = new Random().nextInt(1, 1000);
         if(r < container.get(ValueContainer.POW_CHANCE))
             if (r < container.get(ValueContainer.POW_CHANCE) / 2)
@@ -110,6 +127,7 @@ public abstract class AbstractEntity {
             inv.getARMOR().effects(this, container);
         if(inv.getNECKLACE() != null)
             inv.getNECKLACE().effects(this, container);
+        runReinEffect(container);
 
         double d = container.get(ValueContainer.DF) / 1000d;
         int l = (int) ( generateATK * (1 - d));

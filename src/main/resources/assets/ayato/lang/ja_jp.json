@@ -44,7 +44,13 @@
   "ayato.item.ItemFactory.potion_small":"回復薬(小)",
   "ayato.item.ItemFactory.potion_medium":"回復薬(中)",
   "ayato.item.ItemFactory.potion_large":"回復薬(大)",
+  "ayato.item.ItemFactory.e_potion_small":"持続回復薬（小)",
 
+  "ayato.effect.HealSmall.name":"回復I",
+  "ayato.effect.HealSmall.mes":"$はエフェクト効果により、$回復した",
+
+
+  "ayato.item.HealEffectPotion.mes":"効果を発動した",
   "ayato.item.ItemFactory.wood_sword":"木の剣",
   "ayato.item.ItemFactory.stone_sword":"石の剣",
   "ayato.item.ItemFactory.iron_sword":"鉄の剣",

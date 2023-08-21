@@ -16,6 +16,7 @@ public class ShopMenuTemplate {
                 items.add(ItemFactory.POTION_SMALL.get());
                 items.add(ItemFactory.POTION_MEDIUM.get());
                 items.add(ItemFactory.POTION_LARGE.get());
+                items.add(ItemFactory.EFFECT_HEAL_POTION_SMALL.get());
                 items.add(ItemFactory.WOOD_SWORD.get());
                 items.add(ItemFactory.STONE_SWORD.get());
                 items.add(ItemFactory.IRON_SWORD.get());
