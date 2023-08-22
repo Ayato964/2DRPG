@@ -1,22 +1,22 @@
 {
   "name": "blue_slime",
-  "hp": 10,
-  "uhp": 2,
-  "mp": 0,
-  "ump": 0,
-  "exp": 80,
-  "uexp": 10,
-  "atk": 2,
+  "hp": 100,
+  "uhp": 10,
+  "mp": 10,
+  "ump": 2,
+  "exp": 120,
+  "uexp": 20,
+  "atk": 10,
   "uatk": 2,
-  "pow": 0,
+  "pow": 5,
   "defence": 1,
   "udefence": 1,
-  "avoid": 1,
+  "avoid": 10,
   "uavoid": 1,
   "drop": {
     "items": ["potion_small"],
-    "g": 15,
-    "ug": 10,
+    "g": 80,
+    "ug": 40,
     "chance":1
   }
 }

@@ -39,6 +39,9 @@ public class EnemyFactory {
     public static final RegistoryObject<Enemy> SLIME_YELLOW =
             ENEMIES.create(()-> new Enemy(Main.scene, new ImageMaker("enemy", "slime_yellow"),
                     JsonComponent.get("enemy", "slime_yellow")), "slime_yellow");
+    public static final RegistoryObject<Enemy> SLIME_DARK =
+            ENEMIES.create(()-> new Enemy(Main.scene, new ImageMaker("enemy", "slime_dark"),
+                    JsonComponent.get("enemy", "slime_dark")), "slime_dark");
 
     public static final RegistoryObject<Enemy> TUTORIAL =
             ENEMIES.create(()-> new Enemy(Main.scene, new ImageMaker("enemy", "tutorial"),

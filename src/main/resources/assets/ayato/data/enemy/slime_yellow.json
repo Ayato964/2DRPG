@@ -17,6 +17,6 @@
     "items": ["potion_medium"],
     "g": 40,
     "ug":20,
-    "chance":10
+    "chance":1
   }
 }

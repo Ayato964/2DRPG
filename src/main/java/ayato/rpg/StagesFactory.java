@@ -15,4 +15,6 @@ public class StagesFactory {
             STAGES.create(()-> new StagesObject(JsonComponent.get("stage", "stage0")), "stage0");
     public static final RegistoryObject<StagesObject> SLIME_FOREST =
             STAGES.create(()-> new StagesObject(JsonComponent.get("stage", "slime_forest")), "slime_forest");
+    public static final RegistoryObject<StagesObject> CAVE_ENTRANCE =
+            STAGES.create(()->new StagesObject(JsonComponent.get("stage", "cave_entrance")), "cave_entrance");
 }
