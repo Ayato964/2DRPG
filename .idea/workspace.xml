@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.6.25&#10;&#10;モブ&#10;＊スライム（黒）&#10;ー＞攻撃力も体力も高い">
+    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.6.35&#10;&#10;モブ&#10;＊スライム（黒）&#10;ー＞攻撃力も体力も高い">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/effect/AttackBoostI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/AttackBoost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/effect/EffectsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/effect/EffectsFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/MagicSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/MagicSkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_blue.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_blue.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/MagicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/MagicFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_dark.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_dark.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_red.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_red.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_yellow.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_yellow.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/tutorial.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/cave_entrance.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/cave_entrance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692691379094</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Version.1.6.35&#10;&#10;モブ&#10;＊スライム（黒）&#10;ー＞攻撃力も体力も高い">
+      <created>1692694754558</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692694754558</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +218,8 @@
     <MESSAGE value="Version.1.1&#10;&#10;下宿システムによる、回復システムを追加。&#10;&#10;宿に泊まると500Gと引き換えにHPが回復する。&#10;バトル中は1000G払うことで、超能力でHPが全回復する。&#10;&#10;敵キャラを強化&#10;プレイヤーを弱体化&#10;マップの強化！" />
     <MESSAGE value="Version.1.6.15" />
     <MESSAGE value="Version.1.6.25&#10;&#10;モブ&#10;＊スライム（黒）&#10;ー＞攻撃力も体力も高い" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.1.6.25&#10;&#10;モブ&#10;＊スライム（黒）&#10;ー＞攻撃力も体力も高い" />
+    <MESSAGE value="Version.1.6.25&#10;&#10;システム&#10;＊敵モブも魔法を使えるようになった" />
+    <MESSAGE value="Version.1.6.35&#10;&#10;モブ&#10;＊スライム（黒）&#10;ー＞攻撃力も体力も高い" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.1.6.35&#10;&#10;モブ&#10;＊スライム（黒）&#10;ー＞攻撃力も体力も高い" />
   </component>
 </project>

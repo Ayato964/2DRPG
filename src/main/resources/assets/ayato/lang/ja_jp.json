@@ -18,7 +18,7 @@
   "ayato.animation.AnimationEntities.blue_slime":"スライム(青)",
   "ayato.animation.AnimationEntities.red_slime":"スライム（赤）",
   "ayato.animation.AnimationEntities.yellow_slime":"スライム（黄）",
-
+  "ayato.animation.AnimationEntities.slime_dark":"スライム（黒）",
   "ayato.scene.Battle.attack":"攻撃",
   "ayato.scene.Battle.magic":"魔法",
   "ayato.scene.Battle.item":"アイテム",
@@ -88,11 +88,13 @@
 
   "ayato.magic.MagicFactory.name":"マナの結束",
   "ayato.magic.MagicFactory.unity_breaking":"マナの結束波",
+  "ayato.magic.MagicFactory.attack_boost":"悪魔の力(I)",
   "ayato.magic.Unity.use":"$は$を使った",
   "ayato.magic.Unity.damage":"$が$に$のダメージを与えた",
   "ayato.magic.UnityBreaking.use":"$は$を使った",
   "ayato.magic.UnityBreaking.damage":"$が$に$のダメージを与えた",
-
+  "ayato.effect.AttackBoostI.name":"攻撃力増強(I)",
+  "ayato.magic.AttackBoost.use":"$は$を使った。",
 
 
   "ayato.system.Share.back":"戻る",

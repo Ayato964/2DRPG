@@ -10,4 +10,6 @@ public class EffectsFactory {
 
     public static final RegistoryObject<Effect> HEAL_SMALL =
             EFFECTS.create(()->new HealSmall( 3, 999999999), "heal_small");
+    public static final RegistoryObject<Effect> ATTACK_BOOST_I =
+            EFFECTS.create(AttackBoostI::new, "attack_boostI");
 }

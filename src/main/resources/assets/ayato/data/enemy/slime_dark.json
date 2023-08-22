@@ -1,23 +1,23 @@
 {
-  "name": "blue_slime",
-  "hp": 100,
-  "uhp": 10,
-  "mp": 10,
-  "ump": 2,
-  "exp": 120,
-  "uexp": 20,
+  "name": "slime_dark",
+  "hp": 50,
+  "uhp": 30,
+  "mp": 0,
+  "ump": 0,
+  "exp": 150,
+  "uexp": 80,
   "atk": 10,
   "uatk": 2,
-  "pow": 5,
+  "pow": 10,
   "defence": 1,
   "udefence": 1,
-  "avoid": 10,
+  "avoid": 1,
   "uavoid": 1,
   "drop": {
-    "items": ["potion_small"],
-    "g": 80,
-    "ug": 40,
+    "items": ["potion_medium"],
+    "g": 40,
+    "ug":20,
     "chance":1
   },
-  "magic": ["unity"]
+  "magic": ["attack_boost"]
 }

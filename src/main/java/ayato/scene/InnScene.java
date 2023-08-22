@@ -27,7 +27,7 @@ public class InnScene implements IBaseScene {
                         .font(new Font("", Font.PLAIN, 32))
                         .color(Color.WHITE)
                 , true);
-        Inn.stayInnWithConfirm(lunchScene, player, 1000, iProperty -> {
+        Inn.stayInnWithConfirm(lunchScene, player, 600, iProperty -> {
             lunchScene.changeScene(new Menu(player));
         });
     }
