@@ -1,0 +1,23 @@
+{
+  "name": "lion",
+  "hp": 20,
+  "uhp": 35,
+  "mp": 0,
+  "ump": 0,
+  "exp": 100,
+  "uexp":60,
+  "atk": 5,
+  "uatk": 2,
+  "pow": 10,
+  "defence": 10,
+  "udefence": 1,
+  "avoid": 100,
+  "uavoid": 3,
+  "drop": {
+    "items": ["potion_medium"],
+    "g": 80,
+    "ug":30,
+    "chance":1
+  },
+  "magic": ["defence_boost"]
+}

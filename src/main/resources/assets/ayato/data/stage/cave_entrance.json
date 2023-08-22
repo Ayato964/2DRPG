@@ -2,10 +2,10 @@
   "name": "cave_entrance",
   "states": {
     "enemy": {
-      "lv":1,
-      "maxLv": 5,
+      "lv":5,
+      "maxLv": 10,
       "num": 3,
-      "entities": ["slime_red", "slime_yellow", "slime_dark"]
+      "entities": ["slime_red", "slime_yellow", "slime_dark", "lion"]
     },
     "stage": {
       "escape": 500

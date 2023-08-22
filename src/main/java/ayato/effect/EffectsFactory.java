@@ -12,4 +12,10 @@ public class EffectsFactory {
             EFFECTS.create(()->new HealSmall( 3, 999999999), "heal_small");
     public static final RegistoryObject<Effect> ATTACK_BOOST_I =
             EFFECTS.create(AttackBoostI::new, "attack_boostI");
+    public static final RegistoryObject<Effect> DEFENCE_BOOST_I =
+            EFFECTS.create(()->new DeffenceBoost(1.2d), "defence_boost_i");
+    public static final RegistoryObject<Effect> DEFENCE_BOOST_II =
+            EFFECTS.create(()->new DeffenceBoost(1.5d), "defence_boost_ii");
+    public static final RegistoryObject<Effect> DEFENCE_BOOST_III =
+            EFFECTS.create(()->new DeffenceBoost(2.0d), "defence_boost_iii");
 }

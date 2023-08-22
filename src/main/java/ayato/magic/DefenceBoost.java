@@ -8,17 +8,17 @@ import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 
-public class AttackBoost extends Magic{
+public class DefenceBoost extends Magic{
 
-    public AttackBoost(String name) {
+    public DefenceBoost(String name) {
         super(name, 5, 5, 10);
     }
 
     @Override
     protected void skillAction(LunchScene scene, PropertyAction after, AbstractEntity self, AbstractEntity enemy, Enemy[] enemies) {
-        self.getSTATES().effects.add(EffectsFactory.ATTACK_BOOST_I.get());
+        self.getSTATES().effects.add(EffectsFactory.DEFENCE_BOOST_I.get());
         backMessage(scene, after,
                 ()-> Component.get(Share.INSTANCE, "magic_use", self.getSTATES().NAME, name)
-                );
+        );
     }
 }

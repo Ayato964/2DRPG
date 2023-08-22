@@ -88,15 +88,16 @@
 
   "ayato.magic.MagicFactory.name":"マナの結束",
   "ayato.magic.MagicFactory.unity_breaking":"マナの結束波",
-  "ayato.magic.MagicFactory.attack_boost":"悪魔の力(I)",
+  "ayato.magic.MagicFactory.attack_boost":"子悪魔の力",
+  "ayato.magic.MagicFactory.defence_boost":"ディアーナの加護",
   "ayato.magic.Unity.use":"$は$を使った",
   "ayato.magic.Unity.damage":"$が$に$のダメージを与えた",
   "ayato.magic.UnityBreaking.use":"$は$を使った",
   "ayato.magic.UnityBreaking.damage":"$が$に$のダメージを与えた",
   "ayato.effect.AttackBoostI.name":"攻撃力増強(I)",
-  "ayato.magic.AttackBoost.use":"$は$を使った。",
-
-
+  "ayato.animation.AnimationEntities.lion":"半純血のライオン",
+  "ayato.effect.DeffenceBoost.name":"防御力増強",
   "ayato.system.Share.back":"戻る",
+  "ayato.system.Share.magic_use": "$は$を使った",
   "ayato.system.Share.upgrade":"$のレベルがアップした"
 }

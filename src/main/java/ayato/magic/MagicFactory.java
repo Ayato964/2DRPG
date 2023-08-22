@@ -17,4 +17,6 @@ public class MagicFactory {
             MAGICS.create(()->new UnityBreaking(Component.get(INSTANCE, "unity_breaking")), "unity_breaking");
     public static final RegistoryObject<Magic> ATTACK_BOOST =
             MAGICS.create(()-> new AttackBoost(Component.get(INSTANCE, "attack_boost")), "attack_boost");
+    public static final RegistoryObject<Magic> DEFENCE_BOOST =
+            MAGICS.create(()->new DefenceBoost(Component.get(INSTANCE, "defence_boost") ), "defence_boost");
 }
