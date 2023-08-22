@@ -5,7 +5,7 @@
       "lv":10,
       "maxLv": 5,
       "num": 3,
-      "entities": ["slime_red", "slime_yellow"]
+      "entities": ["slime_red", "slime_yellow", "slime_dark"]
     },
     "stage": {
       "escape": 500
