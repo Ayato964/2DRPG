@@ -195,9 +195,20 @@ public abstract class AbstractBattle implements IBaseScene {
     private void playerRecivedDamage(int i) {
         if(i < enemy.length) {
             if(enemy[i].getSTATES().HP > 0) {
-                int P_RECIVED_DAMAGE = player.recivedATK(enemy[i].generateATK());
-                Animation.create(Main.scene, AnimationComponent.ofText(""),PropertiesTemplate.conv(iProperty -> playerRecivedDamage(i + 1),
-                        () -> Component.get(this, P_RECIVED_DAMAGE == 0? "attack_field_enemy" : "attack_enemy", enemy[i].getSTATES().NAME, player.getSTATES().NAME, String.valueOf(P_RECIVED_DAMAGE))) , false).drawThisScene();
+                int r = new Random().nextInt(0, 1000);
+                if(enemy[i].getSTATES().magic.length() == 0) {
+                    int P_RECIVED_DAMAGE = player.recivedATK(enemy[i].generateATK());
+                    Animation.create(Main.scene, AnimationComponent.ofText(""), PropertiesTemplate.conv(iProperty -> playerRecivedDamage(i + 1),
+                            () -> Component.get(this, P_RECIVED_DAMAGE == 0 ? "attack_field_enemy" : "attack_enemy", enemy[i].getSTATES().NAME, player.getSTATES().NAME, String.valueOf(P_RECIVED_DAMAGE))), false).drawThisScene();
+                }else{
+                    if(r < 300)
+                        enemy[i].generateRandomMagic(Main.scene, iProperty -> playerRecivedDamage(i + 1), enemy[i], player, enemy);
+                    else{
+                        int P_RECIVED_DAMAGE = player.recivedATK(enemy[i].generateATK());
+                        Animation.create(Main.scene, AnimationComponent.ofText(""), PropertiesTemplate.conv(iProperty -> playerRecivedDamage(i + 1),
+                                () -> Component.get(this, P_RECIVED_DAMAGE == 0 ? "attack_field_enemy" : "attack_enemy", enemy[i].getSTATES().NAME, player.getSTATES().NAME, String.valueOf(P_RECIVED_DAMAGE))), false).drawThisScene();
+                    }
+                }
             } else {
                 if(ifEnemiesHPAllZero()){
                     clearResult();

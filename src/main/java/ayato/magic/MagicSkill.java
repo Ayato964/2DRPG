@@ -1,8 +1,11 @@
 package ayato.magic;
 
+import ayato.entity.AbstractEntity;
+import ayato.entity.Enemy;
 import ayato.scene.AbstractBattle;
 import ayato.system.Share;
 import org.ayato.animation.*;
+import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 
@@ -52,5 +55,13 @@ public class MagicSkill {
         AnimationKeyButtons<String, AnimationList<String, Properties>> LIST =
                 new AnimationKeyButtons<>(l, x, y, w, h, Color.RED, Color.WHITE, Color.BLACK);
         LIST.setVisible(true);
+    }
+
+    public int length() {
+        return magics.size();
+    }
+
+    public void run(LunchScene scene, PropertyAction after, AbstractEntity self, AbstractEntity enemy, Enemy[] enemies, int r) {
+        magics.get(r).skill(scene, after, self, enemy, enemies);
     }
 }

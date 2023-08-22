@@ -2,10 +2,12 @@ package ayato.entity;
 
 import ayato.item.Item;
 import ayato.item.ItemFactory;
+import ayato.magic.MagicFactory;
 import ayato.rpg.EnemyFactory;
 import ayato.system.ValueContainer;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.ayato.animation.image.ImageMaker;
+import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.LunchScene;
 import org.jetbrains.annotations.NotNull;
 
@@ -52,6 +54,9 @@ public class Enemy extends AbstractEntity{
             if(item != null)
                 STATES.inventory.add(item);
         }
+        for(int i = 0; i < eStates.get("magic").size(); i ++){
+            STATES.magic.add(MagicFactory.MAGICS.get(eStates.get("magic").get(i).asText()).get());
+        }
     }
 
     @Override
@@ -68,6 +73,9 @@ public class Enemy extends AbstractEntity{
                 eStates.get(EnemyFactory.DF).asInt(),
                 eStates.get(EnemyFactory.AVOID).asInt()
                 );
+        for(int i = 0; i < eStates.get("magic").size(); i ++){
+            STATES.magic.add(MagicFactory.MAGICS.get(eStates.get("magic").get(i).asText()).get());
+        }
     }
     public void takeReward(Player p, ArrayList<Item> itemList, ValueContainer container) {
         int r = new Random().nextInt(0, 1000);
@@ -78,5 +86,11 @@ public class Enemy extends AbstractEntity{
             container.set(ValueContainer.G, container.get(ValueContainer.G) + STATES.G);
 
         container.set(ValueContainer.EXP, container.get(ValueContainer.EXP) + STATES.EXP);
+    }
+
+    public void generateRandomMagic(LunchScene scene, PropertyAction after, AbstractEntity self, AbstractEntity enemy, Enemy[] enemies) {
+        int size = STATES.magic.length();
+        int r = new Random().nextInt(0, size);
+        STATES.magic.run(scene, after, self, enemy, enemies, r);
     }
 }
