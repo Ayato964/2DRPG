@@ -32,8 +32,8 @@ public class PLayerStates extends EntityStates {
         DF += 4;
         POW_CHANCE += 4;
         AVOID += 3 + bounus();
-        HP += MHP;
-        MP += MMP;
+        HP = MHP;
+        MP = MMP;
     }
 
     private int bounus() {
