@@ -1,12 +1,14 @@
 package ayato.entity;
 
 import ayato.effect.Effect;
+import ayato.item.Item;
 import ayato.system.Debug;
 import ayato.system.Inventory;
 import ayato.system.ValueContainer;
 import org.ayato.animation.image.ImageMaker;
 import org.ayato.system.LunchScene;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -15,6 +17,45 @@ public abstract class AbstractEntity {
     private ImageMaker AVATER;
     protected EntityStates STATES;
     protected LunchScene MASTER;
+    protected ValueContainer container = new ValueContainer() {
+        public int atk, pow_chance;
+        public int df, avoid;
+
+        @Override
+        public void reset() {
+            atk = STATES.ATK;
+            pow_chance = STATES.POW_CHANCE;
+            df = STATES.DF;
+            avoid = STATES.AVOID;
+        }
+
+        @Override
+        public void set(int c, int v) {
+            switch (c){
+                case ATK -> atk = v;
+                case POW_CHANCE -> pow_chance = v;
+                case DF -> df = v;
+                case AVOID -> avoid = v;
+            }
+        }
+
+        @Override
+        public int count() {
+            return 4;
+        }
+
+        @Override
+        public int get(int c) {
+            return switch (c){
+                case ATK -> atk;
+                case POW_CHANCE -> pow_chance;
+                case DF -> df;
+                case AVOID -> avoid;
+                default -> throw new IllegalStateException("Unexpected value: " + c);
+            };
+        }
+    };
+
     protected AbstractEntity(LunchScene m, ImageMaker maker,  int x, int y, int w, int h){
         X = x;
         Y = y;
@@ -64,31 +105,9 @@ public abstract class AbstractEntity {
     }
 
     public int generateATK() {
+        container.reset();
         Inventory inv = STATES.inventory;
-        ValueContainer container = new ValueContainer() {
-            public int atk = STATES.ATK, pow_chance = STATES.POW_CHANCE;
-            @Override
-            public void set(int c, int v) {
-                switch (c){
-                    case ATK -> atk = v;
-                    case POW_CHANCE -> pow_chance = v;
-                }
-            }
 
-            @Override
-            public int count() {
-                return 2;
-            }
-
-            @Override
-            public int get(int c) {
-                return switch (c){
-                    case ATK -> atk;
-                    case POW_CHANCE -> pow_chance;
-                    default -> throw new IllegalStateException("Unexpected value: " + c);
-                };
-            }
-        };
         if(inv.getWEAPON() != null)
             inv.getWEAPON().effects(this, container);
         if(inv.getRING() != null)
@@ -105,30 +124,6 @@ public abstract class AbstractEntity {
 
     public int recivedATK(int generateATK) {
         Inventory inv = STATES.inventory;
-        ValueContainer container = new ValueContainer() {
-            int df = STATES.DF, avoid = STATES.AVOID;
-            @Override
-            public void set(int c, int v) {
-                switch (c){
-                    case DF -> df = v;
-                    case AVOID -> avoid = v;
-                }
-            }
-
-            @Override
-            public int count() {
-                return 1;
-            }
-
-            @Override
-            public int get(int c) {
-                return switch (c){
-                    case DF -> df;
-                    case AVOID -> avoid;
-                    default -> throw new IllegalStateException("Unexpected value: " + c);
-                };
-            }
-        };
 
         if(inv.getARMOR() != null)
             inv.getARMOR().effects(this, container);
@@ -145,5 +140,11 @@ public abstract class AbstractEntity {
             return l;
         }else 
             return 0;
+    }
+
+    public void addItemAll(ArrayList<Item> sumItem) {
+        for(Item i : sumItem){
+            STATES.inventory.add(i);
+        }
     }
 }

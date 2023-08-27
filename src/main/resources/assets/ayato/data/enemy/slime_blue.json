@@ -6,13 +6,17 @@
   "ump": 0,
   "exp": 80,
   "uexp": 10,
-  "g": 50,
-  "ug": 30,
   "atk": 2,
   "uatk": 2,
   "pow": 0,
   "defence": 1,
   "udefence": 1,
   "avoid": 1,
-  "uavoid": 1
+  "uavoid": 1,
+  "drop": {
+    "items": ["potion_small"],
+    "g": 30,
+    "ug": 50,
+    "chance":10
+  }
 }

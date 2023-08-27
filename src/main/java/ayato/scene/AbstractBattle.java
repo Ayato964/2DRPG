@@ -6,8 +6,10 @@ import ayato.entity.AbstractEntity;
 import ayato.entity.Enemy;
 import ayato.entity.PLayerStates;
 import ayato.entity.Player;
+import ayato.item.Item;
 import ayato.rpg.Main;
 import ayato.system.PropertiesTemplate;
+import ayato.system.ValueContainer;
 import org.ayato.animation.*;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
@@ -15,6 +17,7 @@ import org.ayato.util.Event;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 public abstract class AbstractBattle implements IBaseScene {
@@ -24,7 +27,37 @@ public abstract class AbstractBattle implements IBaseScene {
     protected Enemy[] enemy;
     protected AnimationKeyButtons<String, AnimationList<String, Properties>> CHOOSE;
     protected int sumG = 0, sumEXP = 0;
+    protected ArrayList<Item> sumItem = new ArrayList<>();
 
+    private ValueContainer container = new ValueContainer() {
+        @Override
+        public void set(int c, int v) {
+            switch (c){
+                case G -> sumG = v;
+                case EXP -> sumEXP = v;
+            }
+        }
+
+        @Override
+        public int count() {
+            return 2;
+        }
+
+        @Override
+        public int get(int c) {
+            return switch (c){
+                case G -> sumG;
+                case EXP -> sumEXP;
+                default -> throw new IllegalStateException("Unexpected value: " + c);
+            };
+        }
+
+        @Override
+        public void reset() {
+            sumG = 0;
+            sumEXP = 0;
+        }
+    };
     protected AbstractBattle(Player player){
         this.player = player;
 
@@ -128,6 +161,7 @@ public abstract class AbstractBattle implements IBaseScene {
     }
 
     public void returnEnemyAction(AbstractEntity entity){
+        Enemy enemy = (Enemy) entity;
         if(entity == null) {
             Event.get(AbstractBattle.class, "battle_free").clear();
             CHOOSE.setVisible(false);
@@ -139,8 +173,7 @@ public abstract class AbstractBattle implements IBaseScene {
             int E_RECIVED_DAMAGE = entity.recivedATK(player.generateATK());
             Animation.create(Main.scene, AnimationComponent.ofText(""), PropertiesTemplate.conv(iProperty -> {
                                 if (entity.getSTATES().HP <= 0) {
-                                    sumG += entity.getSTATES().G;
-                                    sumEXP += entity.getSTATES().EXP;
+                                    enemy.takeReward(player, sumItem, container);
                                 }
                                 playerRecivedDamage(0);
                             },
@@ -189,23 +222,35 @@ public abstract class AbstractBattle implements IBaseScene {
         final int base_lv = player.getSTATES().LV;
         player.addGold(sumG);
         player.addEXP(sumEXP);
+        player.addItemAll(sumItem);
         Animation.create(Main.scene, AnimationComponent.ofText(""),
                 PropertiesTemplate.conv(iProperty -> {
-                            if(base_lv < player.getSTATES().LV)
-                                levelUpMessage();
-                            else {
-                                Event.get(AbstractBattle.class, "battle_free").setEvent(true);
-                                Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
-                                Main.scene.changeScene(new Menu(player));
-                            }
-                            for(Effect e : player.getEffects())
-                                e.isView = false;
+                            goMenu(base_lv < player.getSTATES().LV);
+                            getItemMessage(0);
                         },
                         ()->Component.get(this, "clear.mes"),
                         ()->Component.get(this, "clear.result", player.getSTATES().NAME, String.valueOf(sumEXP), String.valueOf(sumG)))
                 , false).drawThisScene();
     }
 
+    private void getItemMessage(int i) {
+        if(i < sumItem.size()) {
+            Animation.create(Main.scene, AnimationComponent.ofText(""),
+                    PropertiesTemplate.conv(iProperty -> getItemMessage(i + 1), ()->Component.get(this, "get_item", player.getSTATES().NAME,sumItem.get(i).NAME)), false).drawThisScene();
+        }
+    }
+
+    private void goMenu(boolean isLevelUp){
+        if(isLevelUp)
+            levelUpMessage();
+        else {
+            Event.get(AbstractBattle.class, "battle_free").setEvent(true);
+            Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
+            Main.scene.changeScene(new Menu(player));
+        }
+        for(Effect e : player.getEffects())
+            e.isView = false;
+    }
     private void levelUpMessage() {
         Animation.create(Main.scene, AnimationComponent.ofText(""),
                 PropertiesTemplate.conv(iProperty ->{

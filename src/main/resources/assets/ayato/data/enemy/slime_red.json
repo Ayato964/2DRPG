@@ -6,13 +6,17 @@
   "ump": 0,
   "exp": 150,
   "uexp": 80,
-  "g": 80,
-  "ug": 40,
   "atk": 10,
   "uatk": 3,
   "pow": 10,
   "defence": 1,
   "udefence": 1,
   "avoid": 10,
-  "uavoid": 10
+  "uavoid": 10,
+  "drop": {
+    "items": ["potion_medium"],
+    "g": 80,
+    "ug":40,
+    "chance":10
+  }
 }

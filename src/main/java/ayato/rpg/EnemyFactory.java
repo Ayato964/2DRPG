@@ -14,9 +14,6 @@ public class EnemyFactory {
     public static final String U_MP = "ump";
     public static final String EXP = "exp";
     public static final String U_EXP = "uexp";
-
-    public static final String G = "g";
-    public static final String U_G = "ug";
     public static final String DF = "defence";
     public static final String U_DF = "udefence";
     public static final String ATK = "atk";
@@ -24,6 +21,12 @@ public class EnemyFactory {
     public static final String POW = "pow";
     public static final String U_AVOID = "uavoid";
     public static final String AVOID = "avoid";
+
+    public static final String DROP = "drop";
+    public static final String D_ITEMS = "items";
+    public static final String D_G = "g";
+    public static final String D_U_G = "ug";
+    public static final String D_CHANCE = "chance";
     public static final RegistoryList<Enemy> ENEMIES =
             RegistoryList.create(Main.scene, "enemy");
 

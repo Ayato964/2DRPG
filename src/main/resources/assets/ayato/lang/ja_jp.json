@@ -28,6 +28,7 @@
   "ayato.scene.Battle.attack_field_enemy":"$による攻撃は$にはあたらなかった",
   "ayato.scene.Battle.clear.mes":"すべての敵を倒した！！",
   "ayato.scene.Battle.clear.result":"$は$EXPと$Gを手に入れた！！",
+  "ayato.scene.Battle.get_item":"$は$を手に入れた！！",
   "ayato.scene.Battle.levelup.mes":"おめでとう！レベルが上がったよ！！",
   "ayato.scene.Battle.gameover":"殺し合いに負けた",
   "ayato.scene.Battle.escaped":"$は脱出した",

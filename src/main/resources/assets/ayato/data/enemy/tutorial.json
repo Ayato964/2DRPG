@@ -6,13 +6,17 @@
   "ump": 0,
   "exp": 80,
   "uexp": 0,
-  "g": 10,
-  "ug": 0,
   "atk": 1,
   "uatk": 0,
   "pow": 1,
   "defence": 1,
   "udefence": 0,
   "avoid": 0,
-  "uavoid": 0
+  "uavoid": 0,
+  "drop": {
+    "items": [],
+    "g": 10,
+    "ug": 0,
+    "chance":0
+  }
 }
