@@ -83,5 +83,9 @@
   "ayato.scene.PlayerStatesScene.armor":"防具　　　現在:$",
   "ayato.scene.PlayerStatesScene.necklace":"首輪　　　現在:$",
   "ayato.scene.PlayerStatesScene.ring":"指輪　　　現在:$",
-  "ayato.scene.PlayerStatesScene.not_match":"このアイテムは装備できません"
+  "ayato.scene.PlayerStatesScene.not_match":"このアイテムは装備できません",
+
+  "ayato.magic.MagicFactory.name":"マナの結束",
+  "ayato.magic.Unity.use":"$は$を使った",
+  "ayato.magic.Unity.damage":"$が$に$のダメージを与えた"
 }

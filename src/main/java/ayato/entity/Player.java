@@ -1,5 +1,6 @@
 package ayato.entity;
 
+import ayato.magic.MagicFactory;
 import org.ayato.system.LunchScene;
 
 public class Player extends AbstractEntity{
@@ -12,6 +13,7 @@ public class Player extends AbstractEntity{
     @Override
     protected void reset() {
         setSTATES(new PLayerStates("Player", 1, 30, 0, 20, 500, 6, 50, 0, 50));
+        STATES.magic.add(MagicFactory.UNITY.get());
     }
 
     public void addGold(int sumG) {

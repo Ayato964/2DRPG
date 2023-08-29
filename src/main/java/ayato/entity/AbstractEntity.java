@@ -147,4 +147,8 @@ public abstract class AbstractEntity {
             STATES.inventory.add(i);
         }
     }
+
+    public void useMana(int mana) {
+        STATES.MP -= mana;
+    }
 }

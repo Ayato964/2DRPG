@@ -7,6 +7,7 @@ import ayato.entity.Enemy;
 import ayato.entity.PLayerStates;
 import ayato.entity.Player;
 import ayato.item.Item;
+import ayato.magic.Magic;
 import ayato.rpg.Main;
 import ayato.system.PropertiesTemplate;
 import ayato.system.ValueContainer;
@@ -28,8 +29,9 @@ public abstract class AbstractBattle implements IBaseScene {
     protected AnimationKeyButtons<String, AnimationList<String, Properties>> CHOOSE;
     protected int sumG = 0, sumEXP = 0;
     protected ArrayList<Item> sumItem = new ArrayList<>();
+    public AnimationEntities ENTITIES;
 
-    private ValueContainer container = new ValueContainer() {
+    private final ValueContainer container = new ValueContainer() {
         @Override
         public void set(int c, int v) {
             switch (c){
@@ -82,9 +84,9 @@ public abstract class AbstractBattle implements IBaseScene {
                         .center().changeMessage(states.getString()),
                 true);
 
-        AnimationEntities entities = new AnimationEntities(lunchScene, enemy, this::returnEnemyAction, 0, 0, 211, 60);
-        entities.draw();
-        playerGUI(lunchScene, entities);
+        ENTITIES = new AnimationEntities(lunchScene, enemy, 0, 0, 211, 60);
+        ENTITIES.draw(this::returnEnemyAction);
+        playerGUI(lunchScene, ENTITIES);
     }
 
     private void playerGUI(LunchScene scene, AnimationEntities entities) {
@@ -102,10 +104,13 @@ public abstract class AbstractBattle implements IBaseScene {
 
         PLAYER_CHOOSE.add(AnimationComponent.ofText( Component.get(this, "attack")),  list-> {
             Event.get(AbstractBattle.class, "battle_choose").clear();
-            entities.begin();
+            entities.begin(this::returnEnemyAction);
         });
 
-    //    PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "magic")), ()-> System.out.println("Magic"));
+        PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "magic")), list->{
+                Event.get(AbstractBattle.class, "battle_choose").clear();
+                player.getSTATES().magic.viewList(scene, this, 30, 20, 100, 100);
+        });
         PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "item")), list-> {
                     Event.get(AbstractBattle.class, "battle_free").setEvent(false);
                     player.getSTATES().inventory.view(()->{
@@ -269,4 +274,34 @@ public abstract class AbstractBattle implements IBaseScene {
         return true;
     }
     public abstract int escapeChance();
+
+    public void useMagic(Magic magic) {
+        if(player.getSTATES().MP >= magic.getMana()) {
+            player.useMana(magic.getMana());
+            ENTITIES.begin(entity -> returnEnemyActionForMagic(magic, entity));
+        }else{
+            Event.get(AbstractBattle.class, "battle_free").clear();
+            CHOOSE.setVisible(false);
+            CHOOSE.setVisible(true);
+        }
+    }
+
+    private void returnEnemyActionForMagic(Magic m, AbstractEntity entity) {
+        if(entity == null) {
+            Event.get(AbstractBattle.class, "battle_free").clear();
+            CHOOSE.setVisible(false);
+            CHOOSE.setVisible(true);
+        }else{
+            Event.get(AbstractBattle.class, "battle_free").setEvent(false);
+            Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
+            m.skillAction(Main.scene, iProperty -> {
+                for(Enemy e : enemy){
+                    if(e.getSTATES().HP <= 0){
+                        e.takeReward(player, sumItem, container);
+                    }
+                }
+                playerRecivedDamage(0);
+            },  player, entity, enemy);
+        }
+    }
 }

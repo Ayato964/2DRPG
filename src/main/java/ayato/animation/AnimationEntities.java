@@ -12,14 +12,13 @@ import java.util.ArrayList;
 import java.util.function.Consumer;
 
 public class AnimationEntities implements KeyListener {
-    private final Consumer<AbstractEntity> ACTION;
+    private Consumer<AbstractEntity> ACTION;
     private final LunchScene MASTER;
     private final AbstractEntity[] entities;
     private final ArrayList<AnimationList<?, Properties>> animationList;
     private final int x, y, w, h;
     private int count = -1, saveCount = 0;
-    public AnimationEntities(LunchScene scene, AbstractEntity[] entity, Consumer<AbstractEntity> action,  int x, int y, int w, int h){
-        ACTION = action;
+    public AnimationEntities(LunchScene scene, AbstractEntity[] entity, int x, int y, int w, int h){
         MASTER = scene;
         entities = entity;
         animationList = new ArrayList<>();
@@ -28,7 +27,8 @@ public class AnimationEntities implements KeyListener {
         this.w = w;
         this.h = h;
     }
-    public void draw(){
+    public void draw(Consumer<AbstractEntity> action){
+        ACTION = action;
         for(int i = 0; i < entities.length; i ++) {
             final int finalI = i;
 
@@ -65,7 +65,8 @@ public class AnimationEntities implements KeyListener {
             );
         }
     }
-    public void begin(){
+    public void begin(Consumer<AbstractEntity> a){
+        ACTION = a;
         MASTER.FRAME.addKeyListener(this);
         if(entities[saveCount].getSTATES().HP > 0)
             count = saveCount;
