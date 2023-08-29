@@ -15,6 +15,7 @@ public class Inn {
         if(player.getSTATES().G >= howMuchG){
             player.getSTATES().G -= howMuchG;
             player.getSTATES().HP = player.getSTATES().MHP;
+            player.getSTATES().MP = player.getSTATES().MMP;
             Animation.create(scene, AnimationComponent.ofText(""), PropertiesTemplate.conv(action, ()-> Component.get(new Inn(), "heal_success")), false)
                     .drawThisScene();
         }else {

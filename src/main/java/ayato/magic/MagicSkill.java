@@ -1,7 +1,9 @@
 package ayato.magic;
 
 import ayato.scene.AbstractBattle;
+import ayato.system.Share;
 import org.ayato.animation.*;
+import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 
 import java.awt.*;
@@ -43,6 +45,10 @@ public class MagicSkill {
                 battle.useMagic(magic);
             });
         }
+        l.add(AnimationComponent.ofText(Component.get(Share.INSTANCE, "back")), abstractAnimations -> {
+            battle.reset();
+            abstractAnimations.setVisible(false);
+        });
         AnimationKeyButtons<String, AnimationList<String, Properties>> LIST =
                 new AnimationKeyButtons<>(l, x, y, w, h, Color.RED, Color.WHITE, Color.BLACK);
         LIST.setVisible(true);

@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 public class UnityBreaking extends Magic{
 
     public UnityBreaking(String name) {
-        super(name, 10, 5, 10, 5, 5);
+        super(name, 10, 5, 10, 5, 15);
     }
 
     @Override

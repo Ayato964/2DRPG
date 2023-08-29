@@ -90,5 +90,10 @@
   "ayato.magic.Unity.use":"$は$を使った",
   "ayato.magic.Unity.damage":"$が$に$のダメージを与えた",
   "ayato.magic.UnityBreaking.use":"$は$を使った",
-  "ayato.magic.UnityBreaking.damage":"$が$に$のダメージを与えた"
+  "ayato.magic.UnityBreaking.damage":"$が$に$のダメージを与えた",
+
+
+
+  "ayato.system.Share.back":"戻る",
+  "ayato.system.Share.upgrade":"$のレベルがアップした"
 }

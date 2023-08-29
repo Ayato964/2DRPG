@@ -88,6 +88,12 @@ public abstract class AbstractBattle implements IBaseScene {
         ENTITIES.draw(this::returnEnemyAction);
         playerGUI(lunchScene, ENTITIES);
     }
+    public void reset(){
+        Event.get(AbstractBattle.class, "battle_free").setEvent(true);
+        BATTLE_CHOOSE.setEvent(false);
+        CHOOSE.setVisible(false);
+        CHOOSE.setVisible(true);
+    }
 
     private void playerGUI(LunchScene scene, AnimationEntities entities) {
         Animation.create(scene, AnimationComponent.ofText(Component.get(this, "choose")),
@@ -114,9 +120,7 @@ public abstract class AbstractBattle implements IBaseScene {
         PLAYER_CHOOSE.add(AnimationComponent.ofText(Component.get(this, "item")), list-> {
                     Event.get(AbstractBattle.class, "battle_free").setEvent(false);
                     player.getSTATES().inventory.view(()->{
-                        Event.get(AbstractBattle.class, "battle_free").setEvent(true);
-                        CHOOSE.setVisible(false);
-                        CHOOSE.setVisible(true);
+                        reset();
                         viewEffect(scene);
                     });
         });
@@ -294,7 +298,7 @@ public abstract class AbstractBattle implements IBaseScene {
         }else{
             Event.get(AbstractBattle.class, "battle_free").setEvent(false);
             Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
-            m.skillAction(Main.scene, iProperty -> {
+            m.skill(Main.scene, iProperty -> {
                 for(Enemy e : enemy){
                     if(e.getSTATES().HP <= 0){
                         e.takeReward(player, sumItem, container);
