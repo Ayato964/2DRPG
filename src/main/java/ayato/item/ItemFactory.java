@@ -16,28 +16,28 @@ public class ItemFactory {
             RegistoryList.create(Main.scene, "item");
 
     public static final RegistoryObject<Item> POTION_SMALL =
-            ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_small"), 50, 500), "potion_small");
+            ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_small"), 50, 980), "potion_small");
 
     public static final RegistoryObject<Item> POTION_MEDIUM =
-            ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_medium"), 100, 980), "potion_medium");
+            ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_medium"), 100, 1400), "potion_medium");
 
     public static final RegistoryObject<Item> POTION_LARGE =
-            ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_large"), 150, 1400), "potion_large");
+            ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_large"), 150, 2380), "potion_large");
     public static final RegistoryObject<Item> EFFECT_HEAL_POTION_SMALL =
-            ITEMS.create(()-> new HealEffectPotion(Component.get(INSTANCE, "e_potion_small"), 750), "e_potion_small");
+            ITEMS.create(()-> new HealEffectPotion(Component.get(INSTANCE, "e_potion_small"), 900), "e_potion_small");
 
 
     /**
      * Armors
      */
     public static final RegistoryObject<Item> WOOD_SWORD =
-            ITEMS.create(()->new Sword(Component.get(INSTANCE, "wood_sword"), 15,2000), "wood_sword");
+            ITEMS.create(()->new Sword(Component.get(INSTANCE, "wood_sword"), 15,4000), "wood_sword");
     public static final RegistoryObject<Item> STONE_SWORD =
-            ITEMS.create(()->new Sword(Component.get(INSTANCE, "stone_sword"), 20,5000), "stone_sword");
+            ITEMS.create(()->new Sword(Component.get(INSTANCE, "stone_sword"), 20,7000), "stone_sword");
     public static final RegistoryObject<Item> IRON_SWORD =
-            ITEMS.create(()->new Sword(Component.get(INSTANCE, "iron_sword"), 25,7500), "iron_sword");
+            ITEMS.create(()->new Sword(Component.get(INSTANCE, "iron_sword"), 25,12000), "iron_sword");
     public static final RegistoryObject<Item> DIAMOND_SWORD =
-            ITEMS.create(()->new Sword(Component.get(INSTANCE, "diamond_sword"), 30,10000), "diamond_sword");
+            ITEMS.create(()->new Sword(Component.get(INSTANCE, "diamond_sword"), 30,19800), "diamond_sword");
 
     public static final RegistoryObject<Item > COMMON_CHEST =
             ITEMS.create(()->new Chest(Component.get(INSTANCE, "common_chest"), 100, 2500), "common_chest");

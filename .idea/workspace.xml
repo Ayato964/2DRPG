@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.5.17&#10;&#10;&#10;&#10;魔法&#10;＊マナの結束波">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/system/Share.java" afterDir="false" />
+    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.6.0&#10;&#10;システム&#10;＊魔法という概念を追加。&#10;&#10;&#10;魔法&#10;＊マナの結束&#10;＊マナの結束波">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/Magic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/Magic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/MagicSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/MagicSkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/Unity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/Unity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/UnityBreaking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/UnityBreaking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/system/Inn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/system/Inn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/InnScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/InnScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -285,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693307966614</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Version.1.6.0&#10;&#10;システム&#10;＊魔法という概念を追加。&#10;&#10;&#10;魔法&#10;＊マナの結束&#10;＊マナの結束波">
+      <created>1693314444755</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1693314444755</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -320,6 +324,7 @@
     <MESSAGE value="Version.1.5.0&#10;&#10;システム&#10;*アップグレードする際、HPが上限を超えなくなった&#10;*デバッグモードを追加&#10;*エフェクトという概念を追加&#10;*敵がGの代わりにアイテムをドロップするようになった&#10;&#10;アイテム&#10;＊胴当てMark.1&#10;＊胴当てMark.2&#10;＊胴当てMark.3&#10;＊胴当てMark.4&#10;&#10;バグ&#10;＊PlayerStatesScene.java&#10;ー＞戻るを押しても文字は残っていたバグを修正。" />
     <MESSAGE value="Version.1.5.11&#10;&#10;システム&#10;*魔法という概念を追加。&#10;&#10;魔法&#10;＊マナの結束" />
     <MESSAGE value="Version.1.5.17&#10;&#10;&#10;&#10;魔法&#10;＊マナの結束波" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.1.5.17&#10;&#10;&#10;&#10;魔法&#10;＊マナの結束波" />
+    <MESSAGE value="Version.1.6.0&#10;&#10;システム&#10;＊魔法という概念を追加。&#10;&#10;&#10;魔法&#10;＊マナの結束&#10;＊マナの結束波" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.1.6.0&#10;&#10;システム&#10;＊魔法という概念を追加。&#10;&#10;&#10;魔法&#10;＊マナの結束&#10;＊マナの結束波" />
   </component>
 </project>

@@ -108,8 +108,9 @@ public abstract class AbstractEntity {
         container.reset();
         Inventory inv = STATES.inventory;
 
-        if(inv.getWEAPON() != null)
-            inv.getWEAPON().effects(this, container);
+
+        if(STATES.inventory.getWEAPON() != null)
+            STATES.inventory.getWEAPON().effects(this, container);
         if(inv.getRING() != null)
             inv.getRING().effects(this, container);
         runReinEffect(container);

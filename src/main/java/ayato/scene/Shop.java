@@ -27,7 +27,7 @@ public class Shop implements IBaseScene {
 
     @Override
     public void setup(LunchScene lunchScene) {
-        Animation.create(lunchScene, AnimationComponent.ofText(Component.get(this, "select.mes")),
+        Animation.create(lunchScene, AnimationComponent.ofText(Component.get(this, "select.mes", String.valueOf(player.getSTATES().G))),
                 PropertiesComponent.ofText(10, 5).color(Color.WHITE).font(new Font("", Font.PLAIN, 32)), true);
 
         AnimationList<String, Properties> LIST =

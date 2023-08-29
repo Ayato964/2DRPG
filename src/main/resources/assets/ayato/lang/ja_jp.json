@@ -64,7 +64,7 @@
   "ayato.item.ItemFactory.epic_chest":"胴当てMark.4",
 
 
-  "ayato.scene.Shop.select.mes":"購入したいものを選択してください。",
+  "ayato.scene.Shop.select.mes":"購入したいものを選択してください。    現在の所持金:$G",
   "ayato.scene.Shop.complete":"$を購入しました。",
   "ayato.scene.Shop.not_cash":"お金が足りません",
   "ayato.scene.Shop.back":"ショップから出る",
