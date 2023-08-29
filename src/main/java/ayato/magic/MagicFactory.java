@@ -12,4 +12,7 @@ public class MagicFactory {
 
     public static final RegistoryObject<Magic> UNITY =
             MAGICS.create(()->new Unity(Component.get(INSTANCE, "name")), "unity");
+
+    public static final RegistoryObject<Magic> UNITY_BREAKING =
+            MAGICS.create(()->new UnityBreaking(Component.get(INSTANCE, "unity_breaking")), "unity_breaking");
 }

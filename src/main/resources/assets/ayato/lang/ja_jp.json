@@ -86,6 +86,9 @@
   "ayato.scene.PlayerStatesScene.not_match":"このアイテムは装備できません",
 
   "ayato.magic.MagicFactory.name":"マナの結束",
+  "ayato.magic.MagicFactory.unity_breaking":"マナの結束波",
   "ayato.magic.Unity.use":"$は$を使った",
-  "ayato.magic.Unity.damage":"$が$に$のダメージを与えた"
+  "ayato.magic.Unity.damage":"$が$に$のダメージを与えた",
+  "ayato.magic.UnityBreaking.use":"$は$を使った",
+  "ayato.magic.UnityBreaking.damage":"$が$に$のダメージを与えた"
 }

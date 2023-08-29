@@ -8,7 +8,7 @@ import org.ayato.system.LunchScene;
 
 public class Unity extends Magic{
     public Unity(String name) {
-        super(name, 10, 5, 5, 5, 5);
+        super(name, 15, 5, 5, 5, 5);
     }
     @Override
     public void skillAction(LunchScene scene, PropertyAction action,AbstractEntity self, AbstractEntity enemy, Enemy[] enemies) {
