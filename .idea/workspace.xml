@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.6.6&#10;&#10;&#10;モブ&#10;＊バランスを調整した。">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/armors/Sword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/armors/Sword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/Magic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/Magic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/Unity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/Unity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/magic/UnityBreaking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/magic/UnityBreaking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/InnScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/InnScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_blue.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_blue.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_red.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_red.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_yellow.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/enemy/slime_yellow.json" afterDir="false" />
+    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.6.6&#10;&#10;全体的に、バランスを見直した">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693329282920</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Version.1.6.6&#10;&#10;全体的に、バランスを見直した">
+      <created>1693357015824</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1693357015824</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,6 +335,7 @@
     <MESSAGE value="Version.1.5.17&#10;&#10;&#10;&#10;魔法&#10;＊マナの結束波" />
     <MESSAGE value="Version.1.6.0&#10;&#10;システム&#10;＊魔法という概念を追加。&#10;&#10;&#10;魔法&#10;＊マナの結束&#10;＊マナの結束波" />
     <MESSAGE value="Version.1.6.6&#10;&#10;&#10;モブ&#10;＊バランスを調整した。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.1.6.6&#10;&#10;&#10;モブ&#10;＊バランスを調整した。" />
+    <MESSAGE value="Version.1.6.6&#10;&#10;全体的に、バランスを見直した" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.1.6.6&#10;&#10;全体的に、バランスを見直した" />
   </component>
 </project>
