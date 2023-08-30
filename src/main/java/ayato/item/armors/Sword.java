@@ -7,10 +7,10 @@ import ayato.system.ValueContainer;
 import org.ayato.system.LunchScene;
 
 public class Sword extends Item implements Weapon {
-    private final int ATK;
+    private final double ATK;
     public Sword(String name, int atk,  int gold) {
         super(name, gold);
-        ATK = atk;
+        ATK = atk / 10d;
     }
 
     @Override
@@ -20,6 +20,6 @@ public class Sword extends Item implements Weapon {
 
     @Override
     public void effects(AbstractEntity entity, ValueContainer valueContainer) {
-        valueContainer.set(ValueContainer.ATK, valueContainer.get(ValueContainer.ATK) + ATK);
+        valueContainer.set(ValueContainer.ATK, (int) (valueContainer.get(ValueContainer.ATK) * ATK));
     }
 }

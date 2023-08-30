@@ -15,8 +15,8 @@
   "uavoid": 1,
   "drop": {
     "items": ["potion_small"],
-    "g": 30,
-    "ug": 50,
+    "g": 15,
+    "ug": 10,
     "chance":10
   }
 }

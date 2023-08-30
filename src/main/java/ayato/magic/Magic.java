@@ -15,13 +15,11 @@ import java.util.function.Supplier;
 public abstract class Magic {
 
     protected final String name;
-    protected final int uAtk, uMana;
-    protected int atk, mana, lv = 1, exp = 0, mExp;
-    public Magic(String name, int atk, int uAtk, int mana, int uMana, int mExp){
+    protected final int uMana;
+    protected int mana, lv = 1, exp = 0, mExp;
+    public Magic(String name, int mana, int uMana, int mExp){
         this.name = name;
         this.uMana = uMana;
-        this.uAtk = uAtk;
-        this.atk = atk;
         this.mana = mana;
         this.mExp = mExp;
     }
@@ -41,11 +39,11 @@ public abstract class Magic {
     public void upgrade() {
         exp -= mExp;
         lv ++;
-        atk += uAtk;
         mana += uMana;
         mExp = mExp + mExp * (lv - 1);
     }
-    protected void backMessage(LunchScene scene, PropertyAction after, Supplier<String>... mes){
+    @SafeVarargs
+    protected final void backMessage(LunchScene scene, PropertyAction after, Supplier<String>... mes){
         Animation.create(scene, AnimationComponent.ofText(""), PropertiesTemplate.conv(after,mes), false).drawThisScene();
     }
     public void skill(LunchScene scene, PropertyAction after, AbstractEntity self, AbstractEntity enemy, Enemy[] enemies){

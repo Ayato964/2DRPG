@@ -15,8 +15,8 @@
   "uavoid": 10,
   "drop": {
     "items": ["potion_medium"],
-    "g": 80,
-    "ug":40,
+    "g": 40,
+    "ug":20,
     "chance":10
   }
 }
