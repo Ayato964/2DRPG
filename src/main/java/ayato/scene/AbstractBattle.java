@@ -12,6 +12,8 @@ import ayato.rpg.Main;
 import ayato.system.PropertiesTemplate;
 import ayato.system.ValueContainer;
 import org.ayato.animation.*;
+import org.ayato.animation.image.ImageMaker;
+import org.ayato.system.Background;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 import org.ayato.util.Event;
@@ -30,6 +32,7 @@ public abstract class AbstractBattle implements IBaseScene {
     protected int sumG = 0, sumEXP = 0;
     protected ArrayList<Item> sumItem = new ArrayList<>();
     public AnimationEntities ENTITIES;
+    private String bgName;
 
     private final ValueContainer container = new ValueContainer() {
         @Override
@@ -60,9 +63,9 @@ public abstract class AbstractBattle implements IBaseScene {
             sumEXP = 0;
         }
     };
-    protected AbstractBattle(Player player){
+    protected AbstractBattle(Player player, String bgName){
         this.player = player;
-
+        this.bgName = bgName;
     }
 
     @Override
@@ -72,6 +75,8 @@ public abstract class AbstractBattle implements IBaseScene {
 
     @Override
     public void setup(LunchScene lunchScene) {
+        lunchScene.BACKGROUND.mode = Background.BackgroundMode.IMAGE;
+        lunchScene.BACKGROUND.mode.setImage(new ImageMaker("background", bgName));
         BATTLE_FREE.clear();
         BATTLE_CHOOSE.setEvent(false);
         PLayerStates states = (PLayerStates) player.getSTATES();

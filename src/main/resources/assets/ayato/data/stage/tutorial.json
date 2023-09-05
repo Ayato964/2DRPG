@@ -8,6 +8,7 @@
       "entities": ["tutorial"]
     },
     "stage": {
+      "background": "blue_slime_forest",
       "escape": 1000
     }
   }

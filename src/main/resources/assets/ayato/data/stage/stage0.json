@@ -8,6 +8,7 @@
       "entities": ["slime_blue"]
     },
     "stage": {
+      "background": "blue_slime_forest",
       "escape": 900
     }
   }

@@ -3,6 +3,7 @@ package ayato.scene;
 import ayato.entity.Player;
 import ayato.item.ShopMenuTemplate;
 import org.ayato.animation.*;
+import org.ayato.system.Background;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IBaseScene;
@@ -22,6 +23,8 @@ public class Menu implements IBaseScene {
 
     @Override
     public void setup(LunchScene lunchScene) {
+        lunchScene.BACKGROUND.mode = Background.BackgroundMode.COLOR;
+        lunchScene.BACKGROUND.mode.setColor(Color.BLACK);
         Animation.create(lunchScene,AnimationComponent.ofText( Component.get(this, "selection")),
                 PropertiesComponent.ofText(20, 20).font(new Font("", Font.PLAIN, 64)).color(Color.WHITE).center()
                 ,true);

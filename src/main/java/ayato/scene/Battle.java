@@ -13,7 +13,7 @@ public class Battle extends AbstractBattle{
     JsonNode stage_states;
 
     protected Battle(Player player_states, JsonNode stage_info) {
-        super(player_states);
+        super(player_states, stage_info.get(JsonComponent.STAGE).get("background").asText());
         stage_states = stage_info;
     }
 
