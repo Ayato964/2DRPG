@@ -3,6 +3,8 @@ package ayato.scene;
 import ayato.entity.Player;
 import ayato.rpg.StagesFactory;
 import org.ayato.animation.*;
+import org.ayato.animation.image.ImageMaker;
+import org.ayato.system.Background;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IBaseScene;
@@ -21,6 +23,8 @@ public class ChooseMap implements IBaseScene {
 
     @Override
     public void setup(LunchScene lunchScene) {
+        lunchScene.BACKGROUND.mode = Background.BackgroundMode.IMAGE;
+        lunchScene.BACKGROUND.mode.setImage(new ImageMaker("background", "map"));
         Animation.create(lunchScene, AnimationComponent.ofText(Component.get(this, "title")),
                 PropertiesComponent.ofText(5, 10)
                         .font(new Font("", Font.PLAIN, 64)).center().color(Color.RED), true);

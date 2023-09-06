@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.7.0&#10;&#10;モブ&#10;＊半純血のライオン&#10;ー＞足が素早く、回避能力に長けている&#10;&#10;エフェクト&#10;＊防御力増強（I）&#10;&#10;魔法&#10;＊ディアーナの加護">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/blue_slime_forest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/ending.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/slime_forest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/cave_entrance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/village.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/ChooseMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/cave_entrance.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/cave_entrance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/slime_forest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/slime_forest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/stage0.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/stage0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/tutorial.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,31 +43,36 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2Rs2e50qedmnA20HyIVDLE9xryN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;G:/My_Project/RPG_Test/src/main/resources/assets/ayato/data/enemy&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;モジュール&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.19655173&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "G:/My_Project/RPG_Test/src/main/resources/assets/ayato/data/enemy",
+    "project.structure.last.edited": "モジュール",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.19655173",
+    "settings.editor.selected.configurable": "com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\data\enemy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\My_Project\RPG\src\main\resources\assets\ayato\textures\background" />
+      <recent name="G:\My_Project\RPG" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/enemy" />
       <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\textures\enemy" />
-      <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\data" />
-      <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\" />
     </key>
   </component>
   <component name="RunManager" selected="アプリケーション.Run">
@@ -101,6 +102,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <list>

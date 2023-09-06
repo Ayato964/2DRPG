@@ -15,7 +15,7 @@ public class Player extends AbstractEntity{
         setSTATES(new PLayerStates("Player", 1, 30, 0, 20, 500, 6, 50, 0, 50));
         STATES.magic.add(MagicFactory.UNITY.get());
         STATES.magic.add(MagicFactory.UNITY_BREAKING.get());
-        addEXP(1000000);
+    //    addEXP(1000000);
     }
 
     public void addGold(int sumG) {

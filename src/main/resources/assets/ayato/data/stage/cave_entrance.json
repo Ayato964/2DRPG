@@ -8,7 +8,7 @@
       "entities": ["slime_red", "slime_yellow", "slime_dark", "lion"]
     },
     "stage": {
-      "background": "slime_forest",
+      "background": "cave_entrance",
       "escape": 500
     }
   }
