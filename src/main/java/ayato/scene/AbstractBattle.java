@@ -271,7 +271,7 @@ public abstract class AbstractBattle implements IBaseScene {
         else {
             Event.get(AbstractBattle.class, "battle_free").setEvent(true);
             Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
-            Main.scene.changeScene(new Menu(player));
+            Main.scene.changeScene(new FrontWorld(player));
         }
         for(Effect e : player.getEffects())
             e.isView = false;
@@ -281,7 +281,7 @@ public abstract class AbstractBattle implements IBaseScene {
                 PropertiesTemplate.conv(iProperty ->{
                     Event.get(AbstractBattle.class, "battle_free").setEvent(true);
                     Event.get(AbstractBattle.class, "battle_choose").setEvent(false);
-                    Main.scene.changeScene(new Menu(player));}, ()->Component.get(this, "levelup.mes"))
+                    Main.scene.changeScene(new FrontWorld(player));}, ()->Component.get(this, "levelup.mes"))
                 , false).drawThisScene();
 
     }

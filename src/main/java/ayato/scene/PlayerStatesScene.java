@@ -40,7 +40,7 @@ public class PlayerStatesScene implements IBaseScene {
             playerStates(lunchScene);
         });
         CHOOSE.add(AnimationComponent.ofText(Component.get(this, "get_armor")), i->armorSetting(lunchScene));
-        CHOOSE.add(AnimationComponent.ofText(Component.get(this, "back")), i->lunchScene.changeScene(new Menu(PLAYER)));
+        CHOOSE.add(AnimationComponent.ofText(Component.get(this, "back")), i->lunchScene.changeScene(new FrontWorld(PLAYER)));
         CHOOSE_LIST = new AnimationKeyButtons<>(CHOOSE, 10, 50, 30, 50, Color.RED, Color.WHITE, Color.BLACK);
         CHOOSE_LIST.setVisible(true);
     }

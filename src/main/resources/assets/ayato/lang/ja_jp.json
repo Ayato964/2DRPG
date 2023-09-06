@@ -3,6 +3,14 @@
   "ayato.scene.Title.title":"なんとなく作るRPG",
   "ayato.scene.Title.begin":"始める",
   "ayato.scene.Title.exit":"終わる",
+
+  "ayato.scene.FrontWorld.selection":"どこに行く？",
+  "ayato.scene.FrontWorld.village":"村へ",
+  "ayato.scene.FrontWorld.tutorial":"狩りの時間",
+  "ayato.scene.FrontWorld.blue_slime_forest":"青スライムの源",
+  "ayato.scene.FrontWorld.slime_forest":"スライムの森",
+  "ayato.scene.FrontWorld.cave_entrance":"？？の洞窟（入口）",
+
   "ayato.scene.Menu.battle":"敵を倒す",
   "ayato.scene.Menu.hotel":"宿に泊まる",
   "ayato.scene.Menu.shop":"ショップに行く",
