@@ -28,7 +28,7 @@ dependencies {
 // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.15.0-rc2'
 
-    implementation group :"org.ayato", name : "toonlib", version : "2.6.0"
+    implementation group :"org.ayato", name : "toonlib", version : "2.6.2"
 }
 
 test {

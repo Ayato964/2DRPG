@@ -34,7 +34,7 @@ public class Menu implements IBaseScene {
 
         l.add(AnimationComponent.ofText(Component.get(this, "battle")), list->lunchScene.changeScene(new ChooseMap(player)));
         l.add(AnimationComponent.ofText(Component.get(this, "hotel")), list-> lunchScene.changeScene(new InnScene(player)));
-        l.add(AnimationComponent.ofText(Component.get(this, "shop")), list-> lunchScene.changeScene(new Shop(player, ShopMenuTemplate.ALL.get())));
+        l.add(AnimationComponent.ofText(Component.get(this, "shop")), list-> lunchScene.changeScene(new Shop(player, ShopMenuTemplate.ALL.get(), "")));
         l.add(AnimationComponent.ofText(Component.get(this, "player_states")), list->lunchScene.changeScene(new PlayerStatesScene(player)));
 
         AnimationKeyButtons<String, AnimationList<String, Properties>> list =

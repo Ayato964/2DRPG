@@ -4,6 +4,7 @@ import ayato.entity.Player;
 import ayato.item.Item;
 import ayato.system.PropertiesTemplate;
 import org.ayato.animation.*;
+import org.ayato.animation.image.ImageMaker;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IBaseScene;
@@ -15,9 +16,11 @@ public class Shop implements IBaseScene {
     private final Player player;
     private final ArrayList<Item> SEAL_ITEM;
     private AnimationKeyButtons<String, AnimationList<String, Properties>> ANIMATION;
-    public Shop(Player p, ArrayList<Item> items){
+    private final String imageName;
+    public Shop(Player p, ArrayList<Item> items, String imageName){
         player = p;
         SEAL_ITEM = items;
+        this.imageName = imageName;
     }
 
     @Override
@@ -27,6 +30,7 @@ public class Shop implements IBaseScene {
 
     @Override
     public void setup(LunchScene lunchScene) {
+        lunchScene.BACKGROUND.mode.setImage(new ImageMaker("background", imageName));
         Animation.create(lunchScene, AnimationComponent.ofText(Component.get(this, "select.mes", String.valueOf(player.getSTATES().G))),
                 PropertiesComponent.ofText(10, 5).color(Color.WHITE).font(new Font("", Font.PLAIN, 32))
                         .changeMessage(()->Component.get(this, "select.mes", String.valueOf(player.getSTATES().G)))
@@ -39,7 +43,7 @@ public class Shop implements IBaseScene {
             final int finalI = i;
            LIST.add(AnimationComponent.ofText(SEAL_ITEM.get(i).NAME + "   " + SEAL_ITEM.get(i).G + "G"), list-> buy(lunchScene, finalI));
         }
-        LIST.add(AnimationComponent.ofText(Component.get(this, "back")), list->lunchScene.changeScene(new Menu(player)));
+        LIST.add(AnimationComponent.ofText(Component.get(this, "back")), list->lunchScene.changeScene(new Village(player)));
 
         ANIMATION =
                 new AnimationKeyButtons<>(LIST, 10, 30, 120, 90, Color.RED, Color.WHITE, Color.BLACK);

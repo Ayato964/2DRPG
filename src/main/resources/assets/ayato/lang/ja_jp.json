@@ -1,6 +1,6 @@
 {
   "ayato.scene.Title.hello":"こんにちは世界！！",
-  "ayato.scene.Title.title":"なんとなく作るRPG",
+  "ayato.scene.Title.title":"これから魔王を倒しに行こうと思う。",
   "ayato.scene.Title.begin":"始める",
   "ayato.scene.Title.exit":"終わる",
 
@@ -10,7 +10,9 @@
   "ayato.scene.FrontWorld.blue_slime_forest":"青スライムの源",
   "ayato.scene.FrontWorld.slime_forest":"スライムの森",
   "ayato.scene.FrontWorld.cave_entrance":"？？の洞窟（入口）",
-
+  "ayato.scene.Village.general_store":"薬局",
+  "ayato.scene.Village.armor_store":"武器商",
+  "ayato.scene.Village.hotel":"村一番の宿",
   "ayato.scene.Menu.battle":"敵を倒す",
   "ayato.scene.Menu.hotel":"宿に泊まる",
   "ayato.scene.Menu.shop":"ショップに行く",

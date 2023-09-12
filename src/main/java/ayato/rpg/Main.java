@@ -6,6 +6,7 @@ import org.ayato.system.LangLoader;
 import org.ayato.system.LunchScene;
 
 public class Main {
+    public static final String VERSION = "Alpha.1.0";
     public static final LunchScene scene = new LunchScene("Hello");
     public Main(){
     }

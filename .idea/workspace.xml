@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.1.7.20&#10;&#10;システム&#10;*全てもシーンに背景を追加した">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/FrontWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Village.java" afterDir="false" />
+    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.Alpha.1.0&#10;&#10;システム&#10;＊ToonLib.Ver.2.6に対応した。&#10;&#10;シーン&#10;＊背景画像を追加した。&#10;＊全てのシーンに背景を追加。&#10;&#10;マップ&#10;＊村&#10;ー＞回復屋や防具屋などがある">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/armors.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/general_store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background/hotel.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/AbstractBattle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/PlayerStatesScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/PlayerStatesScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/ShopMenuTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ShopMenuTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/rpg/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/rpg/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/InnScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/InnScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Title.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Village.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Village.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/system/Inn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/system/Inn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,12 +43,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Ayato964"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ayato964&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -236,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693971482800</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Version.1.7.27&#10;&#10;FrontWorld.java&#10;マップ選択のクラスを最適化">
+      <option name="closed" value="true" />
+      <created>1693979635720</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1693979635720</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +279,7 @@
     <MESSAGE value="Version.1.7.0&#10;&#10;モブ&#10;＊スライム（黒）&#10;ー＞攻撃力も体力も高い&#10;&#10;システム&#10;＊モブも魔法を使えるようになった。&#10;&#10;エフェクト&#10;＊攻撃力増強（I）&#10;&#10;魔法&#10;＊悪魔の力（I）" />
     <MESSAGE value="Version.1.7.0&#10;&#10;モブ&#10;＊半純血のライオン&#10;ー＞足が素早く、回避能力に長けている&#10;&#10;エフェクト&#10;＊防御力増強（I）&#10;&#10;魔法&#10;＊ディアーナの加護" />
     <MESSAGE value="Version.1.7.20&#10;&#10;システム&#10;*全てもシーンに背景を追加した" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.1.7.20&#10;&#10;システム&#10;*全てもシーンに背景を追加した" />
+    <MESSAGE value="Version.1.7.27&#10;&#10;FrontWorld.java&#10;マップ選択のクラスを最適化" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.1.7.27&#10;&#10;FrontWorld.java&#10;マップ選択のクラスを最適化" />
   </component>
 </project>

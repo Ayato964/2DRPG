@@ -1,7 +1,7 @@
 package ayato.system;
 
 import ayato.entity.Player;
-import ayato.scene.Menu;
+import ayato.scene.Village;
 import org.ayato.animation.*;
 import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.Component;
@@ -29,7 +29,7 @@ public class Inn {
                                 .font(new Font("", Font.PLAIN, 32)));
 
                 l.add(AnimationComponent.ofText(Component.get(new Inn(), "yes")), list->stayInn(scene, player, howMuch, action));
-                l.add(AnimationComponent.ofText(Component.get(new Inn(), "no")), list-> scene.changeScene(new Menu(player)));
+                l.add(AnimationComponent.ofText(Component.get(new Inn(), "no")), list-> scene.changeScene(new Village(player)));
 
         AnimationKeyButtons<String, AnimationList<String, Properties>> list =
                 new AnimationKeyButtons<>(l, 70, 20, 50, 50, Color.RED, Color.WHITE, Color.BLACK);
