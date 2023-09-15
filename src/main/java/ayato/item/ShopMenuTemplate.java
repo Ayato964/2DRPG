@@ -13,6 +13,7 @@ public class ShopMenuTemplate {
     public static final RegistoryObject<ArrayList<Item>> ALL =
             ITEM_TEMPLATE.create(()->{
                 ArrayList<Item> items = new ArrayList<>();
+                items.add(ItemFactory.MEDICINAL_PLANTS.get());
                 items.add(ItemFactory.POTION_SMALL.get());
                 items.add(ItemFactory.POTION_MEDIUM.get());
                 items.add(ItemFactory.POTION_LARGE.get());
@@ -31,10 +32,13 @@ public class ShopMenuTemplate {
     public static final RegistoryObject<ArrayList<Item>> HEALER =
             ITEM_TEMPLATE.create(()-> {
                 ArrayList<Item> items = new ArrayList<>();
+                items.add(ItemFactory.MEDICINAL_PLANTS.get());
                 items.add(ItemFactory.POTION_SMALL.get());
                 items.add(ItemFactory.POTION_MEDIUM.get());
                 items.add(ItemFactory.POTION_LARGE.get());
                 items.add(ItemFactory.EFFECT_HEAL_POTION_SMALL.get());
+                items.add(ItemFactory.ATTACK_POTION_SMALL.get());
+
                 return items;
                 }, "healer");
 
@@ -45,8 +49,8 @@ public class ShopMenuTemplate {
                 i.add(ItemFactory.STONE_SWORD.get());
                 i.add(ItemFactory.IRON_SWORD.get());
                 i.add(ItemFactory.DIAMOND_SWORD.get());
-                i.add(ItemFactory.UNCOMMON_CHEST.get());
                 i.add(ItemFactory.COMMON_CHEST.get());
+                i.add(ItemFactory.UNCOMMON_CHEST.get());
                 i.add(ItemFactory.REA_CHEST.get());
                 i.add(ItemFactory.EPIC_CHEST.get());
                 return i;

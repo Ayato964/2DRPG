@@ -14,10 +14,10 @@
   "avoid": 1,
   "uavoid": 1,
   "drop": {
-    "items": ["potion_medium"],
+    "items": ["medicinal_plants"],
     "g": 40,
     "ug":20,
-    "chance":1
+    "chance":200
   },
   "magic": []
 }

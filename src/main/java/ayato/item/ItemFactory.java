@@ -15,6 +15,10 @@ public class ItemFactory {
     public static final RegistoryList<Item> ITEMS =
             RegistoryList.create(Main.scene, "item");
 
+    public static final RegistoryObject<Item> MEDICINAL_PLANTS =
+            ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "medicinal_plants"), 10, 140), "medicinal_plants");
+
+
     public static final RegistoryObject<Item> POTION_SMALL =
             ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_small"), 50, 700), "potion_small");
 
@@ -24,8 +28,15 @@ public class ItemFactory {
     public static final RegistoryObject<Item> POTION_LARGE =
             ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "potion_large"), 150, 2080), "potion_large");
     public static final RegistoryObject<Item> EFFECT_HEAL_POTION_SMALL =
-            ITEMS.create(()-> new HealEffectPotion(Component.get(INSTANCE, "e_potion_small"), 500), "e_potion_small");
+            ITEMS.create(()-> new HealEffectPotion(Component.get(INSTANCE, "e_potion_small"), 300), "e_potion_small");
 
+    /**
+     * Effect Potions
+     *
+     *
+    */
+    public static final RegistoryObject<Item> ATTACK_POTION_SMALL =
+        ITEMS.create(()->new AttackPotion(Component.get(INSTANCE, "attack_potion_small"), 300), "attack_potion_small");
 
     /**
      * Armors

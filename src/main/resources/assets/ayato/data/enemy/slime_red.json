@@ -14,7 +14,7 @@
   "avoid": 10,
   "uavoid": 10,
   "drop": {
-    "items": ["potion_medium"],
+    "items": ["medicinal_plants"],
     "g": 40,
     "ug":20,
     "chance":1
