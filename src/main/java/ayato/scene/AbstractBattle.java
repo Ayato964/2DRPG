@@ -150,7 +150,7 @@ public abstract class AbstractBattle implements IBaseScene {
         int r = new Random().nextInt(0, 1000);
         if(r < escapeChance()){
             Animation.create(Main.scene, AnimationComponent.ofText(""), PropertiesTemplate
-                    .conv(iProperty -> Main.scene.changeScene(new Menu(player)),
+                    .conv(iProperty -> Main.scene.changeScene(new FrontWorld(player)),
                             ()->Component.get(this, "escaped", player.getSTATES().NAME)),
                     false).drawThisScene();
         }else {
