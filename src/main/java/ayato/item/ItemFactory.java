@@ -1,5 +1,7 @@
 package ayato.item;
 
+import ayato.effect.AttackBoost;
+import ayato.effect.EffectsFactory;
 import ayato.item.armors.Chest;
 import ayato.item.armors.Sword;
 import ayato.rpg.Main;
@@ -15,7 +17,7 @@ public class ItemFactory {
     public static final RegistoryList<Item> ITEMS =
             RegistoryList.create(Main.scene, "item");
 
-    public static final RegistoryObject<Item> MEDICINAL_PLANTS =
+    public static final RegistoryObject<Item> GREEN_PLANTS =
             ITEMS.create(()-> new HealPotion(Component.get(INSTANCE, "medicinal_plants"), 10, 140), "medicinal_plants");
 
 
@@ -35,8 +37,11 @@ public class ItemFactory {
      *
      *
     */
+    public static final RegistoryObject<Item> RED_PLANTS =
+            ITEMS.create(()->new AttackPotion(Component.get(INSTANCE, "attack_plants"), (AttackBoost) EffectsFactory.ATTACK_BOOST.get(), 300), "attack_plants");
+
     public static final RegistoryObject<Item> ATTACK_POTION_SMALL =
-        ITEMS.create(()->new AttackPotion(Component.get(INSTANCE, "attack_potion_small"), 300), "attack_potion_small");
+        ITEMS.create(()->new AttackPotion(Component.get(INSTANCE, "attack_potion_small"), (AttackBoost) EffectsFactory.ATTACK_BOOST_I.get(), 500), "attack_potion_small");
 
     /**
      * Armors

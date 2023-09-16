@@ -9,7 +9,7 @@ public class DeffenceBoost extends Effect {
 
     final double power;
     public DeffenceBoost( double power) {
-        super(new ImageMaker("effect", "heal"), 1, 5);
+        super(new ImageMaker("effect", "defence_boost"), 1, 5);
         this.power = power;
     }
 

@@ -59,6 +59,7 @@
   "ayato.item.ItemFactory.potion_large":"回復薬(大)",
   "ayato.item.ItemFactory.e_potion_small":"持続回復薬（小)",
   "ayato.item.ItemFactory.attack_potion_small":"攻撃力増強薬（小）",
+  "ayato.item.ItemFactory.attack_plants":"レッドハーブ",
   "ayato.effect.HealSmall.name":"回復I",
   "ayato.effect.HealSmall.mes":"$はエフェクト効果により、$回復した",
   "ayato.effect.AttackBoost.name":"$は攻撃力が上がった",

@@ -13,7 +13,8 @@ public class ShopMenuTemplate {
     public static final RegistoryObject<ArrayList<Item>> ALL =
             ITEM_TEMPLATE.create(()->{
                 ArrayList<Item> items = new ArrayList<>();
-                items.add(ItemFactory.MEDICINAL_PLANTS.get());
+                items.add(ItemFactory.RED_PLANTS.get());
+                items.add(ItemFactory.GREEN_PLANTS.get());
                 items.add(ItemFactory.POTION_SMALL.get());
                 items.add(ItemFactory.POTION_MEDIUM.get());
                 items.add(ItemFactory.POTION_LARGE.get());
@@ -32,7 +33,8 @@ public class ShopMenuTemplate {
     public static final RegistoryObject<ArrayList<Item>> HEALER =
             ITEM_TEMPLATE.create(()-> {
                 ArrayList<Item> items = new ArrayList<>();
-                items.add(ItemFactory.MEDICINAL_PLANTS.get());
+                items.add(ItemFactory.GREEN_PLANTS.get());
+                items.add(ItemFactory.RED_PLANTS.get());
                 items.add(ItemFactory.POTION_SMALL.get());
                 items.add(ItemFactory.POTION_MEDIUM.get());
                 items.add(ItemFactory.POTION_LARGE.get());
