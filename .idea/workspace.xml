@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.Alpha.1.0.11&#10;&#10;アイテム&#10;*グリーンハーブ(小)&#10;ー＞HPを１０回復する&#10;*攻撃力増強薬(小)&#10;-&gt;攻撃力を1.2倍増加する&#10;&#10;モブ&#10;*全てのモブが弱体化&#10;ー＞回復アイテムが「回復薬(小)」から「グリーンハーブ」になった&#10;&#10;エフェクト&#10;＊攻撃力増強I 1.2倍&#10;＊攻撃力増強II 1.5倍&#10;＊攻撃力増強III 2.0倍">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/effect/defence_boost.png" afterDir="false" />
+    <list default="true" id="6ae0e5af-8d90-49a3-a5c8-29d6b6873ac1" name="変更" comment="Version.Alpha.1.1&#10;&#10;&#10;アイテム&#10;*レッドハーブ&#10;-&gt;攻撃力が1.2倍&#10;*グリーンハーブ(小)&#10;ー＞HPを１０回復する&#10;*攻撃力増強薬(小)&#10;-&gt;攻撃力を1.5倍増加する&#10;&#10;モブ&#10;*全てのモブが弱体化&#10;ー＞回復アイテムが「回復薬(小)」から「グリーンハーブ」になった&#10;&#10;エフェクト&#10;＊攻撃力増強I 1.5倍&#10;＊攻撃力増強II 2.0倍&#10;＊攻撃力増強III 3.0倍">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/map/ImageMakerPlus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/map/MapChip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/map/MapChipDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/map/MapGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/map/MapNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/map/Plant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/map/Wall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayato/map/WaterCorner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/map/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/data/stage/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/map/grass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/map/water.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/effect/DeffenceBoost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/effect/DeffenceBoost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/effect/EffectsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/effect/EffectsFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/AttackPotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/AttackPotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ItemFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/item/ShopMenuTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/item/ShopMenuTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayato/scene/FrontWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayato/scene/FrontWorld.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,11 +89,11 @@
       <recent name="G:\My_Project\RPG_Test\src\main\resources\assets\ayato\data\enemy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\My_Project\RPG\src\main\resources\assets\ayato\textures\map" />
       <recent name="G:\My_Project\RPG\src\main\resources\assets\ayato\textures\effect" />
       <recent name="G:\My_Project\RPG\src\main\resources\assets\ayato\textures\background" />
       <recent name="G:\My_Project\RPG" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/background" />
-      <recent name="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/enemy" />
     </key>
   </component>
   <component name="RunManager" selected="アプリケーション.Run">
@@ -262,7 +268,31 @@
       <option name="project" value="LOCAL" />
       <updated>1694803337683</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Version.Alpha.1.0.11&#10;&#10;アイテム&#10;*レッドハーブ&#10;-&gt;攻撃力が1.2倍">
+      <option name="closed" value="true" />
+      <created>1694894643388</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1694894643388</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Version.Alpha.1.0.20&#10;&#10;アイテム&#10;*レッドハーブ&#10;-&gt;攻撃力が1.2倍">
+      <option name="closed" value="true" />
+      <created>1694894663633</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1694894663633</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Version.Alpha.1.1&#10;&#10;&#10;アイテム&#10;*レッドハーブ&#10;-&gt;攻撃力が1.2倍&#10;*グリーンハーブ(小)&#10;ー＞HPを１０回復する&#10;*攻撃力増強薬(小)&#10;-&gt;攻撃力を1.5倍増加する&#10;&#10;モブ&#10;*全てのモブが弱体化&#10;ー＞回復アイテムが「回復薬(小)」から「グリーンハーブ」になった&#10;&#10;エフェクト&#10;＊攻撃力増強I 1.5倍&#10;＊攻撃力増強II 2.0倍&#10;＊攻撃力増強III 3.0倍">
+      <option name="closed" value="true" />
+      <created>1694894801855</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1694894801855</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,6 +323,9 @@
     <MESSAGE value="Version.1.7.27&#10;&#10;FrontWorld.java&#10;マップ選択のクラスを最適化" />
     <MESSAGE value="Version.Alpha.1.0&#10;&#10;システム&#10;＊ToonLib.Ver.2.6.2に対応した。&#10;&#10;シーン&#10;＊背景画像を追加した。&#10;＊全てのシーンに背景を追加。&#10;&#10;マップ&#10;＊村&#10;ー＞回復屋や防具屋などがある" />
     <MESSAGE value="Version.Alpha.1.0.11&#10;&#10;アイテム&#10;*グリーンハーブ(小)&#10;ー＞HPを１０回復する&#10;*攻撃力増強薬(小)&#10;-&gt;攻撃力を1.2倍増加する&#10;&#10;モブ&#10;*全てのモブが弱体化&#10;ー＞回復アイテムが「回復薬(小)」から「グリーンハーブ」になった&#10;&#10;エフェクト&#10;＊攻撃力増強I 1.2倍&#10;＊攻撃力増強II 1.5倍&#10;＊攻撃力増強III 2.0倍" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.Alpha.1.0.11&#10;&#10;アイテム&#10;*グリーンハーブ(小)&#10;ー＞HPを１０回復する&#10;*攻撃力増強薬(小)&#10;-&gt;攻撃力を1.2倍増加する&#10;&#10;モブ&#10;*全てのモブが弱体化&#10;ー＞回復アイテムが「回復薬(小)」から「グリーンハーブ」になった&#10;&#10;エフェクト&#10;＊攻撃力増強I 1.2倍&#10;＊攻撃力増強II 1.5倍&#10;＊攻撃力増強III 2.0倍" />
+    <MESSAGE value="Version.Alpha.1.0.11&#10;&#10;アイテム&#10;*レッドハーブ&#10;-&gt;攻撃力が1.2倍" />
+    <MESSAGE value="Version.Alpha.1.0.20&#10;&#10;アイテム&#10;*レッドハーブ&#10;-&gt;攻撃力が1.2倍" />
+    <MESSAGE value="Version.Alpha.1.1&#10;&#10;&#10;アイテム&#10;*レッドハーブ&#10;-&gt;攻撃力が1.2倍&#10;*グリーンハーブ(小)&#10;ー＞HPを１０回復する&#10;*攻撃力増強薬(小)&#10;-&gt;攻撃力を1.5倍増加する&#10;&#10;モブ&#10;*全てのモブが弱体化&#10;ー＞回復アイテムが「回復薬(小)」から「グリーンハーブ」になった&#10;&#10;エフェクト&#10;＊攻撃力増強I 1.5倍&#10;＊攻撃力増強II 2.0倍&#10;＊攻撃力増強III 3.0倍" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.Alpha.1.1&#10;&#10;&#10;アイテム&#10;*レッドハーブ&#10;-&gt;攻撃力が1.2倍&#10;*グリーンハーブ(小)&#10;ー＞HPを１０回復する&#10;*攻撃力増強薬(小)&#10;-&gt;攻撃力を1.5倍増加する&#10;&#10;モブ&#10;*全てのモブが弱体化&#10;ー＞回復アイテムが「回復薬(小)」から「グリーンハーブ」になった&#10;&#10;エフェクト&#10;＊攻撃力増強I 1.5倍&#10;＊攻撃力増強II 2.0倍&#10;＊攻撃力増強III 3.0倍" />
   </component>
 </project>

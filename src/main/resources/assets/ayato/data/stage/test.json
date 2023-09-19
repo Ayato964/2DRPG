@@ -1,0 +1,19 @@
+{
+  "name": "tutorial",
+  "states": {
+    "enemy": {
+      "lv": 1,
+      "maxLv": 1,
+      "num": 1,
+      "entities": ["tutorial"]
+    },
+    "stage": {
+      "background": "blue_slime_forest",
+      "escape": 1000,
+      "size": {
+        "weight": 4,
+        "height": 4
+      }
+    }
+  }
+}

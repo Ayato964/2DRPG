@@ -23,6 +23,7 @@
   "ayato.scene.ChooseMap.slime_forest":"スライムの森",
   "ayato.scene.ChooseMap.tutorial":"入門",
   "ayato.scene.ChooseMap.cave_entrance":"？？の洞窟（入り口）",
+  "ayato.scene.FrontWorld.test":"テストチェンバー",
 
   "ayato.animation.AnimationEntities.tutorial":"ただの鹿",
   "ayato.animation.AnimationEntities.blue_slime":"スライム(青)",

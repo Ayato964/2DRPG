@@ -1,8 +1,11 @@
 package ayato.scene;
 
 import ayato.entity.Player;
+import ayato.map.MapGenerator;
 import ayato.rpg.Main;
 import ayato.rpg.StagesFactory;
+import ayato.system.Debug;
+import ayato.system.JsonComponent;
 import org.ayato.animation.*;
 import org.ayato.animation.image.ImageMaker;
 import org.ayato.system.Background;
@@ -60,6 +63,10 @@ public class FrontWorld implements IBaseScene, KeyListener {
                 scene.changeScene(new Battle(player, StagesFactory.SLIME_FOREST.get().getStates())));
         L.add(AnimationComponent.ofText(Component.get(this, "cave_entrance")), abstractAnimations ->
                 scene.changeScene(new Battle(player, StagesFactory.CAVE_ENTRANCE.get().getStates())));
+
+        Debug.method(()->L.add(AnimationComponent.ofText(Component.get(this, "test")), abstractAnimations ->
+                new MapGenerator(scene, player, JsonComponent.get("stage", "test"))));
+
         AnimationKeyButtons<String, AnimationList<String, Properties>> LIST =
                 new AnimationKeyButtons<>(L, 10, 20, 40, 80, Color.RED, Color.WHITE, Color.BLACK);
         LIST.setVisible(true);
